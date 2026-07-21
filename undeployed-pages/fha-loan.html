@@ -61,11 +61,12 @@
   .mobile-menu a:last-child{border-bottom:none;}
   .mobile-menu .m-group-label{padding:14px 4px 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
 
-  .mp-hero{position:relative;min-height:460px;display:flex;align-items:center;overflow:hidden;color:#fff;}
+  .mp-hero{position:relative;min-height:460px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;text-align:center;}
   .mp-hero-bg{position:absolute;inset:0;z-index:0;}
   .mp-hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.55);}
   .mp-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg, rgba(15,16,19,.96) 20%, rgba(15,16,19,.55) 65%, rgba(15,16,19,.3));}
-  .mp-hero-inner{position:relative;z-index:1;padding:90px 0 76px;max-width:700px;}
+  .mp-hero .glow-r{position:absolute;bottom:-25%;right:-10%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.26) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-hero-inner{position:relative;z-index:1;padding:90px 0 76px;max-width:700px;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
   .mp-ribbon{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:8px 16px 8px 8px;margin-bottom:26px;}
   .mp-ribbon .stars{display:flex;gap:1px;}
   .mp-ribbon .stars svg{width:11px;height:11px;fill:var(--gold-300);}
@@ -74,7 +75,7 @@
   .mp-hero h1 .line{display:block;}
   .mp-hero h1 .line.accent-gold{color:var(--gold-300);}
   .mp-hero .sub{margin-top:20px;font-size:16.5px;color:#c4c2ba;max-width:52ch;}
-  .mp-cta-row{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .mp-cta-row{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;justify-content:center;}
 
   .mp-question{background:var(--gold-grad);padding:66px 0;text-align:center;}
   .mp-question h2{color:var(--ink);max-width:900px;margin:0 auto;}
@@ -136,11 +137,19 @@
   .footer-socials a:hover{background:var(--gold-grad);}
   .footer-socials svg{width:15px;height:15px;stroke:currentColor;}
 
+  .mp-getstarted{padding:80px 0;background:var(--slate-100);border-top:1px solid var(--slate-200);border-bottom:1px solid var(--slate-200);text-align:center;}
+  .mp-getstarted p{max-width:560px;margin:14px auto 0;}
+  .mp-getstarted .mp-cta-row{justify-content:center;margin-top:28px;}
+
   .mp-two-col{padding:110px 0;}
-  .mp-two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
-  @media (max-width:900px){.mp-two-col-grid{grid-template-columns:1fr;gap:40px;}}
-  .mp-two-col-grid h3{margin-bottom:14px;color:var(--gold-700);}
-  .mp-two-col-grid p + p{margin-top:0;}
+  .mp-two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media (max-width:900px){.mp-two-col-grid{grid-template-columns:1fr;gap:24px;}}
+  .mp-two-col-card{background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:40px;box-shadow:var(--shadow);}
+  .mp-two-col-card .ic{width:44px;height:44px;border-radius:12px;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+  .mp-two-col-card .ic svg{width:20px;height:20px;stroke:var(--ink);}
+  .mp-two-col-grid h3{margin-bottom:14px;color:var(--ink);}
+  .mp-two-col-grid p{font-size:15.5px;}
+  .mp-two-col-grid p + p{margin-top:16px;}
   .mp-bullets{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px;}
   .mp-bullets li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--slate-600);}
   .mp-bullets svg{width:16px;height:16px;flex-shrink:0;margin-top:5px;stroke:var(--gold-700);}
@@ -245,6 +254,7 @@
 
 <header class="mp-hero">
   <div class="mp-hero-bg"><img src="../ChatGPT Image Jul 19, 2026, 04_49_29 PM.png" alt="" /></div>
+  <div class="glow-r" aria-hidden="true"></div>
   <div class="wrap mp-hero-inner">
     <div class="mp-ribbon">
       <div class="stars">
@@ -271,20 +281,34 @@
 <section class="mp-question">
   <div class="wrap">
     <h2>An FHA Loan Provides a Government-Insured Loan With Flexible Options</h2>
+    <p style="color:rgba(23,24,28,.75);margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto;">Even experienced homeowners may need to plan for a long time for a new home purchase. Fortunately, FHA loans may help some buyers get into the home of their dreams with a lower down payment.</p>
   </div>
 </section>
 
 <section class="mp-two-col">
   <div class="wrap mp-two-col-grid">
-    <div>
+    <div class="mp-two-col-card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 015 0c0 1.5-1.5 2-2.5 3v.5"/><circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none"/></svg></div>
       <h3>What is an FHA loan?</h3>
       <p>FHA loans are mortgages backed by the U.S. Federal Housing Administration. Lenders, such as banks and credit unions, that provide FHA loans provide funding for home purchases while requiring a lower down payment. Buyers may get into a new home with as little as 3.5% down.</p>
-      <p>Using conventional loans, a lower down payment requires the borrower to get private mortgage insurance. This special type of insurance protects the lender just in case the borrower is not able to pay. The cost of PMI is added to the monthly payment until the amount of the loan reaches 20%. FHA loans, on the other hand, do not require PMI because they are backed by the U.S. government.</p>
+      <p>Using conventional loans, a lower down payment requires the borrower to get private mortgage insurance. This special type of insurance protects the lender just in case the borrower is not able to pay. The cost of PMI is added to the monthly payment until the amount of the loan reaches 20%. FHA loans, on the other hand, do not require PMI because they are backed by the U.S. government. Additional scrutiny is often required during the loan application process using an FHA loan.</p>
     </div>
-    <div>
+    <div class="mp-two-col-card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
       <h3>What is required for an FHA loan?</h3>
-      <p>Many of the same documents are required for an FHA loan that any potential lender will want to see: employment history, appraisal, debt-to-income ratio. Buyers may have to bring 3.5% of the purchase price as a down payment, more if they have a credit score below 580. FHA loans are only available for the borrower's primary residence.</p>
-      <p>Credit requirements may also be lower for FHA loans, given other factors demonstrate that the borrower is able to manage their money responsibly.</p>
+      <p>Many of the same documents are required for an FHA loan that any potential lender will want to see: employment history, appraisal, debt-to-income ratio. A few additional stipulations are also attached to the FHA loan process. Buyers may have to bring 3.5% of the purchase price as a down payment, more if they have a credit score below 580. FHA loans are only available for the borrower's primary residence.</p>
+      <p>Credit requirements may also be lower for FHA loans, given other factors demonstrate that the borrower is able to manage their money responsibly. Each lender looks at individual applications and may ask for additional documentation or explanations. They are often able to work with buyers with a lower credit score or shorter credit history than in other situations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mp-getstarted">
+  <div class="wrap">
+    <h2>Get Started Today!</h2>
+    <p>Fill out the questionnaire on this page to start a discussion about your mortgage needs today!</p>
+    <div class="mp-cta-row">
+      <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/PkXXQ5sL68EsneWBUybg" target="_blank" rel="noopener">Apply Now!</a>
+      <a class="btn btn-dark" href="https://form.jotform.com/dominatetoday/selfemployedprimaryresidence" target="_blank" rel="noopener">Schedule A Consultation</a>
     </div>
   </div>
 </section>
