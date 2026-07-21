@@ -25,6 +25,12 @@
   .wrap{max-width:1450px;margin:0 auto;padding:0 32px;}
   .gold-text{color:var(--gold-700);}
   a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible{outline:none;box-shadow:var(--focus-ring);border-radius:6px;}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);background:var(--slate-100);border:1px solid var(--slate-200);padding:6px 14px;border-radius:99px;margin-bottom:16px;}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+  .eyebrow.on-dark{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--gold-300);}
+  .eyebrow.no-dot::before{display:none;}
+
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;padding:16px 28px;border-radius:99px;border:none;cursor:pointer;font-family:var(--font-body);transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out);white-space:nowrap;}
   .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(184,146,46,.55);}
   .btn-primary{background:var(--gold-grad);color:var(--ink);box-shadow:0 8px 20px -6px rgba(184,146,46,.4);}
@@ -83,10 +89,15 @@
   .fp-trust-bar .n{font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--ink);}
   .fp-trust-bar .l{font-size:12px;color:var(--slate-600);}
   .fp-headline{max-width:none;margin:40px auto 0;padding-top:36px;border-top:1px solid var(--slate-200);text-align:center;}
-  .fp-note{background:var(--slate-100);border:1px solid var(--slate-200);border-radius:14px;padding:20px 28px;max-width:520px;margin:28px auto 0;text-align:center;}
-  .fp-note .t{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);}
-  .fp-note .s{font-size:14px;color:var(--slate-600);margin-top:6px;}
   .fp-hero-inner .btn{margin-top:32px;}
+
+  .fp-stat-row{display:flex;width:fit-content;justify-content:flex-start;gap:0;margin:32px auto 0;background:#fff;border:1px solid var(--slate-200);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;}
+  @media (max-width:900px){.fp-stat-row{flex-wrap:wrap;width:auto;max-width:560px;}}
+  .fp-stat-cell{padding:20px 22px;text-align:left;}
+  .fp-stat-cell + .fp-stat-cell{border-left:1px solid var(--slate-200);}
+  @media (max-width:900px){.fp-stat-cell{flex:1 1 45%;}.fp-stat-cell:nth-child(2n+1){border-left:none;}.fp-stat-cell:nth-child(n+3){border-top:1px solid var(--slate-200);}}
+  .fp-stat-cell .t{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--slate-400);white-space:nowrap;}
+  .fp-stat-cell .s{font-family:var(--font-display);font-weight:800;font-size:17px;color:var(--gold-700);margin-top:4px;white-space:nowrap;}
 
   .fp-step-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;}
   .fp-step-tag .num{width:26px;height:26px;border-radius:50%;background:rgba(221,183,78,.12);border:1px solid rgba(221,183,78,.35);color:var(--gold-300);font-family:var(--font-display);font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -95,43 +106,31 @@
   .fp-step-tag.on-dark .lbl{color:var(--gold-300);}
   .fp-step-tag.on-light .num{background:var(--slate-100);border-color:var(--slate-200);color:var(--gold-700);}
 
-  .fp-req-section{padding:140px 0;position:relative;overflow:hidden;}
-  .fp-req-section.dark{background:var(--ink);color:#fff;}
-  .fp-req-section.dark::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);}
-  .fp-req-section.dark p{color:#c4c2ba;}
-  .fp-req-section.dark h2{color:#fff;}
-  .fp-req-divider{height:1px;background:rgba(255,255,255,.12);margin:48px 0 56px;}
-  .fp-req-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
-  @media (max-width:900px){.fp-req-grid{grid-template-columns:1fr;gap:40px;}}
-  .fp-req-panel{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:8px 24px;}
-  .fp-req-row{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08);}
-  .fp-req-row:last-child{border-bottom:none;}
-  .fp-req-row .ic{width:26px;height:26px;border-radius:50%;background:rgba(221,183,78,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-  .fp-req-row .ic svg{width:12px;height:12px;stroke:var(--gold-300);}
-  .fp-req-row p{font-size:14.5px;color:#c4c2ba;margin:0;}
-  .fp-req-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);}
-  .fp-req-photo img{width:100%;height:100%;object-fit:cover;}
-
-  .fp-split{padding:140px 0;}
-  .fp-split-copy{max-width:900px;margin:0 auto;text-align:center;}
-  .fp-split-divider{height:1px;background:var(--slate-200);margin:28px 0 40px;}
-  .fp-tag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:720px;margin:0 auto;}
-  @media (max-width:700px){.fp-tag-grid{grid-template-columns:1fr 1fr;}}
+  .fp-split{padding:140px 0;position:relative;overflow:hidden;background:var(--ink);color:#fff;}
+  .fp-split::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);z-index:2;}
+  .fp-split .glow-l{position:absolute;top:-20%;left:-18%;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.24) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-split .glow-r{position:absolute;bottom:-25%;right:-18%;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.18) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-split .wrap{position:relative;z-index:1;}
+  .fp-split h2{color:#fff;}
+  .fp-split-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;}
+  @media (max-width:900px){.fp-split-grid{grid-template-columns:1fr;gap:36px;}}
+  .fp-tag-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px;}
   @media (max-width:480px){.fp-tag-grid{grid-template-columns:1fr;}}
-  .fp-tag-card{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--slate-200);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);text-align:left;}
-  .fp-tag-card .ic{width:26px;height:26px;border-radius:50%;background:var(--slate-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .fp-tag-card .ic svg{width:12px;height:12px;stroke:var(--gold-700);}
-  .fp-tag-card span{font-size:14px;font-weight:600;color:var(--ink);}
-  .fp-split-note{margin-top:32px;font-weight:700;color:var(--gold-700);}
+  .fp-tag-card{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px 12px;text-align:left;}
+  .fp-tag-card .ic{width:24px;height:24px;border-radius:50%;background:rgba(221,183,78,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fp-tag-card .ic svg{width:11px;height:11px;stroke:var(--gold-300);}
+  .fp-tag-card span{font-size:13.5px;font-weight:600;color:#fff;line-height:1.3;}
+  .fp-split-photo{border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);aspect-ratio:4/3;}
+  .fp-split-photo img{width:100%;height:100%;object-fit:cover;}
 
-  .fp-addl{padding:0 0 140px;}
+  .fp-addl-divider{height:1px;background:rgba(255,255,255,.12);margin:80px 0;}
   .fp-addl-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:32px auto 0;}
   @media (max-width:700px){.fp-addl-grid{grid-template-columns:1fr;}}
-  .fp-addl-card{background:#fff;border:1px solid var(--slate-200);border-radius:16px;padding:32px 28px;text-align:center;box-shadow:var(--shadow);}
-  .fp-addl-card .ic{width:44px;height:44px;border-radius:50%;background:var(--slate-100);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
-  .fp-addl-card .ic svg{width:19px;height:19px;stroke:var(--gold-700);}
-  .fp-addl-card h3{font-size:17px;}
-  .fp-addl .btn{margin-top:40px;}
+  .fp-addl-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:32px 28px;text-align:center;}
+  .fp-addl-card .ic{width:44px;height:44px;border-radius:50%;background:rgba(221,183,78,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+  .fp-addl-card .ic svg{width:19px;height:19px;stroke:var(--gold-300);}
+  .fp-addl-card h3{font-size:17px;color:#fff;}
+  .fp-addl-grid + .btn{margin-top:40px;}
   .legal{background:var(--slate-100);padding:90px 0;border-top:1px solid var(--slate-200);}
   .legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
   @media (max-width:900px){.legal-grid{grid-template-columns:1fr;}}
@@ -266,7 +265,7 @@
       <div class="eyebrow no-dot">Funding Program</div>
       <h1>Commercial Funding</h1>
       <div class="fp-video">
-        <img src="../ChatGPT Image Jul 19, 2026, 05_50_18 PM.png" alt="Commercial Funding" />
+        <img src="../ChatGPT Image Jul 19, 2026, 05_33_26 PM.png" alt="Commercial Funding" />
         <div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
         <div class="fp-video-label">
           <div class="t">Funding for Retail, Strip Malls, Shopping Centers, Apartment Complexes, Warehouse and More</div>
@@ -286,67 +285,59 @@
       <div class="fp-headline">
         <h2>Purchase | Rate and Term | Cashout Refinance</h2>
       </div>
-      <div class="fp-note">
-        <div class="t">Pre-Qualification Guidelines &mdash; Funding Requirements</div>
-        <div class="s">Minimum Loan Amount $75,000 &nbsp;&middot;&nbsp; Maximum Loan Amount: $5,000,000</div>
+      <div class="fp-stat-row">
+        <div class="fp-stat-cell"><div class="t">Loan Range</div><div class="s">$75,000 - $5,000,000</div></div>
+        <div class="fp-stat-cell"><div class="t">Credit Score</div><div class="s">650+ Middle Score</div></div>
+        <div class="fp-stat-cell"><div class="t">Mortgage History</div><div class="s">12-Mo. Primary/Rental</div></div>
+        <div class="fp-stat-cell"><div class="t">Funding Speed</div><div class="s">5-7 Days After Appraisal</div></div>
       </div>
       <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/MozsTx7Hr0zJP8eBTXv5" target="_blank" rel="noopener">Apply Now!</a>
     </div>
   </div>
 </header>
 
-<section class="fp-req-section dark">
-  <div class="wrap">
-    <div class="fp-step-tag on-dark"><div class="num">01</div><div class="lbl">Requirements</div></div>
-    <h2>Funding Requirements</h2>
-    <div class="fp-req-divider"></div>
-    <div class="fp-req-grid">
-      <div class="fp-req-panel">
-        <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>650+ Middle Credit Score</p></div>
-        <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>12 Month Primary Mortgage History or Verifiable Rental History</p></div>
-      </div>
-      <div class="fp-req-photo">
-        <img src="../ChatGPT Image Jul 19, 2026, 05_25_08 PM.png" alt="Commercial funding requirements" />
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="fp-split">
-  <div class="wrap fp-split-copy">
-    <div class="fp-step-tag on-light"><div class="num">02</div><div class="lbl">Specializations</div></div>
-    <h2>Specializing in:</h2>
-    <div class="fp-split-divider"></div>
-    <div class="fp-tag-grid">
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Retail</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Strip Malls</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Shopping Centers</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Apartment Complexes</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Mix Use</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>1-4 Single Family Residence</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Warehouse</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Auto Gas Stations</span></div>
-      <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Self Storage</span></div>
+  <div class="glow-l" aria-hidden="true"></div>
+  <div class="glow-r" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="fp-split-grid">
+      <div>
+        <div class="fp-step-tag on-dark"><div class="num">01</div><div class="lbl">Specializations</div></div>
+        <h2>Specializing in:</h2>
+        <div class="fp-tag-grid">
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Retail</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Strip Malls</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Shopping Centers</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Apartment Complexes</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Mix Use</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>1-4 Single Family Residence</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Warehouse</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Auto Gas Stations</span></div>
+          <div class="fp-tag-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Self Storage</span></div>
+        </div>
+      </div>
+      <div class="fp-split-photo">
+        <img src="../ChatGPT Image Jul 19, 2026, 05_25_08 PM.png" alt="Commercial funding specializations" />
+      </div>
     </div>
-    <p class="fp-split-note">Usually, Funds in 5-7 Days After Appraisal</p>
-  </div>
-</section>
 
-<section class="fp-addl">
-  <div class="wrap" style="text-align:center;">
-    <div class="fp-step-tag on-light" style="justify-content:center;display:flex;"><div class="num">03</div><div class="lbl">Additional Services</div></div>
-    <h2>Additional Services</h2>
-    <div class="fp-addl-grid">
-      <div class="fp-addl-card">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 17V7l6 5-6 5z"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Commercial Funding and Consulting</h3>
+    <div class="fp-addl-divider"></div>
+
+    <div style="text-align:center;">
+      <div class="fp-step-tag on-dark" style="justify-content:center;display:flex;"><div class="num">02</div><div class="lbl">Additional Services</div></div>
+      <h2>Additional Services</h2>
+      <div class="fp-addl-grid">
+        <div class="fp-addl-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 17V7l6 5-6 5z"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Commercial Funding and Consulting</h3>
+        </div>
+        <div class="fp-addl-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+          <h3>Commercial Loan Packaging</h3>
+        </div>
       </div>
-      <div class="fp-addl-card">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
-        <h3>Commercial Loan Packaging</h3>
-      </div>
+      <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/MozsTx7Hr0zJP8eBTXv5" target="_blank" rel="noopener">Apply Now!</a>
     </div>
-    <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/MozsTx7Hr0zJP8eBTXv5" target="_blank" rel="noopener">Apply Now!</a>
   </div>
 </section>
 
