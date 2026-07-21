@@ -61,11 +61,12 @@
   .mobile-menu a:last-child{border-bottom:none;}
   .mobile-menu .m-group-label{padding:14px 4px 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
 
-  .mp-hero{position:relative;min-height:460px;display:flex;align-items:center;overflow:hidden;color:#fff;}
+  .mp-hero{position:relative;min-height:460px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;color:#fff;}
   .mp-hero-bg{position:absolute;inset:0;z-index:0;}
   .mp-hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.55);}
   .mp-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg, rgba(15,16,19,.96) 20%, rgba(15,16,19,.55) 65%, rgba(15,16,19,.3));}
-  .mp-hero-inner{position:relative;z-index:1;padding:90px 0 76px;max-width:700px;}
+  .mp-hero .glow-r{position:absolute;bottom:-25%;right:-10%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.26) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-hero-inner{position:relative;z-index:1;padding:90px 0 76px;max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
   .mp-ribbon{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:8px 16px 8px 8px;margin-bottom:26px;}
   .mp-ribbon .stars{display:flex;gap:1px;}
   .mp-ribbon .stars svg{width:11px;height:11px;fill:var(--gold-300);}
@@ -75,17 +76,26 @@
   .mp-hero h1 .line.accent-gold{color:var(--gold-300);}
   .mp-hero .sub{margin-top:20px;font-size:16.5px;color:#c4c2ba;max-width:52ch;}
   .mp-cta-row{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .mp-hero .mp-cta-row{justify-content:center;}
 
   .mp-question{background:var(--gold-grad);padding:66px 0;text-align:center;}
   .mp-question h2{color:var(--ink);max-width:900px;margin:0 auto;}
 
   .mp-two-col{padding:110px 0;}
-  .mp-two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
-  @media (max-width:900px){.mp-two-col-grid{grid-template-columns:1fr;gap:40px;}}
-  .mp-two-col-grid h3{margin-bottom:14px;color:var(--gold-700);}
-  .mp-two-col-grid p + p{margin-top:0;}
+  .mp-two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media (max-width:900px){.mp-two-col-grid{grid-template-columns:1fr;gap:24px;}}
+  .mp-two-col-card{background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:40px;box-shadow:var(--shadow);}
+  .mp-two-col-card .ic{width:44px;height:44px;border-radius:12px;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+  .mp-two-col-card .ic svg{width:20px;height:20px;stroke:var(--ink);}
+  .mp-two-col-grid h3{margin-bottom:14px;color:var(--ink);}
+  .mp-two-col-grid p{font-size:15.5px;}
+  .mp-two-col-grid p + p{margin-top:16px;}
 
-  .mp-req{background:var(--ink);color:#fff;padding:110px 0;}
+  .mp-req{position:relative;background:var(--ink);color:#fff;padding:110px 0;overflow:hidden;}
+  .mp-req .glow-l{position:absolute;top:-25%;left:-10%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.22) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-req .glow-r{position:absolute;bottom:-25%;right:-10%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.22) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-req .pattern{position:absolute;inset:0;background:url('../6225087.jpg') center/cover;opacity:.015;z-index:0;}
+  .mp-req .wrap{position:relative;z-index:1;}
   .mp-req .kicker{text-align:center;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-300);margin-bottom:12px;}
   .mp-req h2{color:#fff;text-align:center;max-width:700px;margin:0 auto;}
   .mp-req-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;}
@@ -95,13 +105,13 @@
   .mp-req-card:hover{border-color:rgba(221,183,78,.4);background:rgba(255,255,255,.06);}
   .mp-req-card .ic{width:42px;height:42px;border-radius:11px;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
   .mp-req-card .ic svg{width:20px;height:20px;stroke:var(--ink);}
+  .mp-req-card h3{margin-bottom:10px;}
   .mp-req-card p{color:#c4c2ba;font-size:14.5px;line-height:1.6;}
-
-  .mp-final{position:relative;background:var(--ink);padding:90px 0;text-align:center;overflow:hidden;}
-  .mp-final::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:2px;background:var(--gold-grad);}
-  .mp-final h2{color:#fff;max-width:22ch;margin:0 auto;}
-  .mp-final .mp-cta-row{justify-content:center;margin-top:30px;}
-  .mp-final p{color:#c4c2ba;max-width:52ch;margin:14px auto 0;}
+  .mp-req-divider{width:70%;height:2px;background:var(--gold-grad);margin:80px auto;}
+  .mp-req-final{text-align:center;}
+  .mp-req-final h2{color:#fff;max-width:22ch;margin:0 auto;}
+  .mp-req-final p{color:#c4c2ba;max-width:52ch;margin:14px auto 0;}
+  .mp-req-final .mp-cta-row{justify-content:center;margin-top:30px;}
 
   .legal{background:var(--slate-100);padding:90px 0;border-top:1px solid var(--slate-200);}
   .legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
@@ -231,6 +241,7 @@
 
 <header class="mp-hero">
   <div class="mp-hero-bg"><img src="../ChatGPT Image Jul 19, 2026, 05_28_07 PM.png" alt="" /></div>
+  <div class="glow-r"></div>
   <div class="wrap mp-hero-inner">
     <div class="mp-ribbon">
       <div class="stars">
@@ -262,12 +273,14 @@
 
 <section class="mp-two-col">
   <div class="wrap mp-two-col-grid">
-    <div>
+    <div class="mp-two-col-card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
       <h3>15 Year Loan</h3>
       <p>You will pay less in interest. If you borrow $100,000 to purchase a home at a 4% interest rate, paying over a longer period of time will mean more interest on the money borrowed. So, a 15-year mortgage can significantly cut down on the interest that you pay.</p>
       <p>Add to that the lower interest rates that are often available for 15-year mortgages and you could have some big savings available. Your monthly payment will likely be higher, but you will be mortgage-free in half the time, which is no small feat.</p>
     </div>
-    <div>
+    <div class="mp-two-col-card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
       <h3>30 Year Loan</h3>
       <p>You will pay more in interest over a longer mortgage — this is how banks and other lenders make their money. They loan you, the borrower, money and collect their interest over the 15 or 30 years it takes you to pay them back.</p>
       <p>Your monthly payment will likely be lower. Because you are spreading out your payments over a longer period of time, they will almost always be lower with a 30-year mortgage. If your monthly budget is tight, this may be a better way to go.</p>
@@ -276,6 +289,9 @@
 </section>
 
 <section class="mp-req">
+  <div class="pattern"></div>
+  <div class="glow-l"></div>
+  <div class="glow-r"></div>
   <div class="wrap">
     <div class="kicker">The Details</div>
     <h2>How It Works</h2>
@@ -296,16 +312,16 @@
         <p>Pay your mortgage off at any time without penalty. Your actual payment will vary based on your situation and current rates when you apply.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="mp-final">
-  <div class="wrap">
-    <h2>Ready to Lock In a Fixed Rate?</h2>
-    <p>One of our mortgage specialists would be happy to answer all of your questions.</p>
-    <div class="mp-cta-row">
-      <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/PkXXQ5sL68EsneWBUybg" target="_blank" rel="noopener">Apply Now!</a>
-      <a class="btn btn-ghost" href="https://form.jotform.com/dominatetoday/selfemployedprimaryresidence" target="_blank" rel="noopener">Schedule A Consultation</a>
+    <div class="mp-req-divider"></div>
+
+    <div class="mp-req-final">
+      <h2>Ready to Lock In a Fixed Rate?</h2>
+      <p>One of our mortgage specialists would be happy to answer all of your questions.</p>
+      <div class="mp-cta-row">
+        <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/PkXXQ5sL68EsneWBUybg" target="_blank" rel="noopener">Apply Now!</a>
+        <a class="btn btn-ghost" href="https://form.jotform.com/dominatetoday/selfemployedprimaryresidence" target="_blank" rel="noopener">Schedule A Consultation</a>
+      </div>
     </div>
   </div>
 </section>
