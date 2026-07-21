@@ -46,20 +46,20 @@
   nav .row{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;gap:28px;}
   .logo-img{height:38px;width:auto;}
   .logo-img.footer-mark{height:36px;}
-  .navlinks{display:flex;flex-direction:column;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
-  .nav-row{display:flex;gap:22px;white-space:nowrap;}
+  .navlinks{display:flex;flex-direction:column;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
+  .nav-row{display:flex;justify-content:center;gap:22px;white-space:nowrap;}
   .navlinks a{position:relative;padding-bottom:4px;}
   .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold-grad);transition:width .22s var(--ease-out);}
   .navlinks a:hover, .navlinks a.active{color:var(--gold-700);}
   .navlinks a:hover::after, .navlinks a.active::after{width:100%;}
   @media (max-width:1180px){.navlinks{display:none;}}
 
-  .nav-drop{position:relative;}
+  .nav-drop{position:relative;z-index:10;}
   .nav-drop>.drop-label{display:flex;align-items:center;gap:5px;cursor:pointer;padding-bottom:5px;}
   .nav-drop>.drop-label svg{width:11px;height:11px;stroke:currentColor;transition:transform .18s var(--ease-out);}
   .nav-drop:hover>.drop-label{color:var(--gold-700);}
   .nav-drop:hover>.drop-label svg{transform:rotate(180deg);}
-  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:40px;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
+  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:0;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
   .nav-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
   .drop-menu a:hover{background:var(--slate-100);color:var(--gold-700);}
