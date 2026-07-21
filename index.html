@@ -46,11 +46,12 @@
   nav .row{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;gap:28px;}
   .logo-img{height:38px;width:auto;}
   .logo-img.footer-mark{height:36px;}
-  .navlinks{display:flex;gap:26px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
-  .navlinks>a{position:relative;padding-bottom:5px;}
-  .navlinks>a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold-grad);transition:width .22s var(--ease-out);}
-  .navlinks>a:hover{color:var(--gold-700);}
-  .navlinks>a:hover::after{width:100%;}
+  .navlinks{display:flex;flex-direction:column;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
+  .nav-row{display:flex;gap:22px;white-space:nowrap;}
+  .navlinks a{position:relative;padding-bottom:4px;}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold-grad);transition:width .22s var(--ease-out);}
+  .navlinks a:hover, .navlinks a.active{color:var(--gold-700);}
+  .navlinks a:hover::after, .navlinks a.active::after{width:100%;}
   @media (max-width:1180px){.navlinks{display:none;}}
 
   .nav-drop{position:relative;}
@@ -58,7 +59,7 @@
   .nav-drop>.drop-label svg{width:11px;height:11px;stroke:currentColor;transition:transform .18s var(--ease-out);}
   .nav-drop:hover>.drop-label{color:var(--gold-700);}
   .nav-drop:hover>.drop-label svg{transform:rotate(180deg);}
-  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:14px;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
+  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:40px;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
   .nav-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
   .drop-menu a:hover{background:var(--slate-100);color:var(--gold-700);}
@@ -349,32 +350,53 @@
   <div class="row wrap">
     <a href="homepage.html"><img class="logo-img" src="logo-black-gold.png" alt="Empire Funding &amp; Capital Solutions" /></a>
     <div class="navlinks">
-      <a href="homepage.html" class="active">Home</a>
-      <div class="nav-drop">
-        <div class="drop-label">About Us<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
-        <div class="drop-menu">
-          <a href="our-company.html">Our Company</a>
-          <a href="meet-our-ceo.html">Meet our CEO</a>
-          <a href="testimonials.html">Testimonials</a>
+      <div class="nav-row">
+        <a href="homepage.html" class="active">Home</a>
+        <div class="nav-drop">
+          <div class="drop-label">About Us<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+          <div class="drop-menu">
+            <a href="our-company.html">Our Company</a>
+            <a href="meet-our-ceo.html">Meet our CEO</a>
+            <a href="testimonials.html">Testimonials</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <div class="drop-label">Business Funding<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+          <div class="drop-menu">
+            <a href="undeployed-pages/quick-funding.html">Quick Personal Funding</a>
+            <a href="undeployed-pages/coaching-funding.html">Coach Funding</a>
+            <a href="undeployed-pages/business-funding.html">Business Funding</a>
+            <a href="undeployed-pages/real-estate-investment-funding.html">Real Estate Investment Funding</a>
+            <a href="undeployed-pages/commercial-funding.html">Commercial Funding</a>
+            <a href="undeployed-pages/faith-based-funding.html">Faith-Based Funding</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <div class="drop-label">Business Credit Builders<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+          <div class="drop-menu">
+            <a href="undeployed-pages/business-credit-builder.html">The Ultimate Business Credit Builder</a>
+          </div>
+        </div>
+        <div class="nav-drop">
+          <div class="drop-label">Primary Residence Options<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+          <div class="drop-menu">
+            <a href="undeployed-pages/self-employed-primary-residence.html">Self-Employed Primary Residence</a>
+            <a href="undeployed-pages/first-time-homebuyers.html">First Time Homebuyers</a>
+            <a href="undeployed-pages/fha-loan.html">FHA Financing</a>
+            <a href="undeployed-pages/va-loan.html">VA Financing</a>
+            <a href="undeployed-pages/jumbo-loan.html">Jumbo Loan</a>
+            <a href="undeployed-pages/primary-rehab-loan.html">Primary Rehab</a>
+            <a href="undeployed-pages/vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
+            <a href="undeployed-pages/fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
+          </div>
         </div>
       </div>
-      <div class="nav-drop">
-        <div class="drop-label">Business Funding<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
-        <div class="drop-menu">
-          <a href="#">Business Funding</a>
-          <a href="#">Business Credit Builders</a>
-        </div>
+      <div class="nav-row">
+        <a href="business-opportunities.html">Business Opportunities</a>
+        <a href="business-resources.html">Business Resources</a>
+        <a href="refer-a-friend.html">Refer-A-Friend</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <a href="#">Primary Residence Options</a>
-      <div class="nav-drop">
-        <div class="drop-label">More<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
-        <div class="drop-menu">
-          <a href="business-opportunities.html">Business Opportunities</a>
-          <a href="business-resources.html">Business Resources</a>
-          <a href="refer-a-friend.html">Refer-A-Friend</a>
-        </div>
-      </div>
-      <a href="contact.html">Contact</a>
     </div>
     <div class="nav-actions">
       <a class="btn btn-primary btn-sm" href="https://api.leadconnectorhq.com/widget/form/6nXw2f4g6acOKpngsLoy" target="_blank" rel="noopener">Book a Call</a>
@@ -390,9 +412,23 @@
     <a href="meet-our-ceo.html">Meet our CEO</a>
     <a href="testimonials.html">Testimonials</a>
     <div class="m-group-label">Business Funding</div>
-    <a href="#">Business Funding</a>
-    <a href="#">Business Credit Builders</a>
-    <a href="#">Primary Residence Options</a>
+    <a href="undeployed-pages/quick-funding.html">Quick Personal Funding</a>
+    <a href="undeployed-pages/coaching-funding.html">Coach Funding</a>
+    <a href="undeployed-pages/business-funding.html">Business Funding</a>
+    <a href="undeployed-pages/real-estate-investment-funding.html">Real Estate Investment Funding</a>
+    <a href="undeployed-pages/commercial-funding.html">Commercial Funding</a>
+    <a href="undeployed-pages/faith-based-funding.html">Faith-Based Funding</a>
+    <div class="m-group-label">Business Credit Builders</div>
+    <a href="undeployed-pages/business-credit-builder.html">The Ultimate Business Credit Builder</a>
+    <div class="m-group-label">Primary Residence Options</div>
+    <a href="undeployed-pages/self-employed-primary-residence.html">Self-Employed Primary Residence</a>
+    <a href="undeployed-pages/first-time-homebuyers.html">First Time Homebuyers</a>
+    <a href="undeployed-pages/fha-loan.html">FHA Financing</a>
+    <a href="undeployed-pages/va-loan.html">VA Financing</a>
+    <a href="undeployed-pages/jumbo-loan.html">Jumbo Loan</a>
+    <a href="undeployed-pages/primary-rehab-loan.html">Primary Rehab</a>
+    <a href="undeployed-pages/vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
+    <a href="undeployed-pages/fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
     <div class="m-group-label">More</div>
     <a href="business-opportunities.html">Business Opportunities</a>
     <a href="business-resources.html">Business Resources</a>
