@@ -25,6 +25,19 @@
   .wrap{max-width:1450px;margin:0 auto;padding:0 32px;}
   .gold-text{color:var(--gold-700);}
   a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible{outline:none;box-shadow:var(--focus-ring);border-radius:6px;}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);background:var(--slate-100);border:1px solid var(--slate-200);padding:6px 14px;border-radius:99px;margin-bottom:16px;}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+  .eyebrow.on-dark{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--gold-300);}
+  .eyebrow.no-dot::before{display:none;}
+
+  .fp-step-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .fp-step-tag .num{width:26px;height:26px;border-radius:50%;background:rgba(221,183,78,.12);border:1px solid rgba(221,183,78,.35);color:var(--gold-300);font-family:var(--font-display);font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fp-step-tag .lbl{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
+  .fp-step-tag.on-dark .num{color:var(--gold-300);}
+  .fp-step-tag.on-dark .lbl{color:var(--gold-300);}
+  .fp-step-tag.on-light .num{background:var(--slate-100);border-color:var(--slate-200);color:var(--gold-700);}
+
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;padding:16px 28px;border-radius:99px;border:none;cursor:pointer;font-family:var(--font-body);transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out);white-space:nowrap;}
   .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(184,146,46,.55);}
   .btn-primary{background:var(--gold-grad);color:var(--ink);box-shadow:0 8px 20px -6px rgba(184,146,46,.4);}
@@ -61,30 +74,44 @@
   .mobile-menu a:last-child{border-bottom:none;}
   .mobile-menu .m-group-label{padding:14px 4px 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
 
-  .fp-hero{background:var(--ink);color:#fff;padding:90px 0 70px;text-align:center;position:relative;overflow:hidden;}
-  .fp-hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);}
-  .fp-hero h1{color:#fff;max-width:16ch;margin:0 auto;}
-  .fp-hero .sub{margin:18px auto 0;font-size:16px;color:#c4c2ba;max-width:52ch;}
-  .fp-hero .btn{margin-top:30px;}
+  .fp-hero{background:var(--paper);color:var(--ink);padding:100px 0 110px;text-align:center;position:relative;overflow:hidden;}
+  .fp-hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);z-index:2;}
+  .fp-hero .glow-l{position:absolute;top:-14%;left:-8%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.28) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-hero .glow-r{position:absolute;bottom:-20%;right:-8%;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.22) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-hero .wrap{position:relative;z-index:1;}
+  .fp-hero h1{color:var(--ink);max-width:18ch;margin:0 auto;}
+  .fp-hero .sub{margin:18px auto 0;font-size:17px;color:var(--slate-600);max-width:52ch;}
+  .fp-hero .btn{margin-top:32px;}
+  .fp-hero-divider{height:1px;background:var(--slate-200);margin:56px auto 48px;max-width:820px;}
 
-  .fp-bullets{padding:80px 0;}
-  .fp-bullets .wrap{max-width:820px;}
-  .fp-bullet{display:flex;align-items:flex-start;gap:16px;margin-bottom:26px;}
-  .fp-bullet svg{width:20px;height:20px;flex-shrink:0;margin-top:3px;stroke:var(--gold-700);}
-  .fp-bullet p{font-size:17px;}
+  .fp-step-tag{justify-content:center;}
+  .fp-bullet-panel{max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:8px 28px;box-shadow:var(--shadow);text-align:left;}
+  .fp-bullet{display:flex;align-items:flex-start;gap:16px;padding:22px 0;border-bottom:1px solid var(--slate-200);}
+  .fp-bullet:last-child{border-bottom:none;}
+  .fp-bullet .ic{width:30px;height:30px;border-radius:50%;background:var(--slate-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+  .fp-bullet .ic svg{width:14px;height:14px;stroke:var(--gold-700);}
+  .fp-bullet p{font-size:16px;line-height:1.65;}
 
-  .fp-link-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:34px 0 6px;}
+  .fp-link-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:36px 0 0;}
   .fp-link-row a{background:var(--slate-100);border:1px solid var(--slate-200);padding:12px 22px;border-radius:99px;font-size:13.5px;font-weight:700;color:var(--ink);transition:background .18s var(--ease-out), color .18s var(--ease-out);}
   .fp-link-row a:hover{background:var(--gold-grad);}
 
-  .fp-consult{background:var(--ink);color:#fff;padding:90px 0;text-align:center;}
+  .fp-consult{background:var(--ink);color:#fff;padding:110px 0;text-align:center;position:relative;overflow:hidden;}
+  .fp-consult::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);z-index:2;}
+  .fp-consult::after{content:"";position:absolute;inset:0;background-image:url('../6225087.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.03;pointer-events:none;}
+  .fp-consult .glow-l{position:absolute;top:-20%;left:-12%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.2) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-consult .glow-r{position:absolute;bottom:-25%;right:-12%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.15) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-consult .wrap{position:relative;z-index:1;}
   .fp-consult h2{color:#fff;max-width:20ch;margin:0 auto;}
   .fp-consult p{color:#c4c2ba;margin-top:16px;max-width:48ch;margin-left:auto;margin-right:auto;}
-  .fp-consult .btn{margin-top:30px;}
+  .fp-consult .btn{margin-top:32px;}
 
-  .fp-split{padding:100px 0;}
+  .fp-split{padding:140px 0;}
   .fp-split-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
   @media (max-width:900px){.fp-split-grid{grid-template-columns:1fr;gap:40px;}}
+  .fp-split-badge{width:56px;height:56px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 12px 28px -10px rgba(184,146,46,.5);}
+  .fp-split-badge svg{width:24px;height:24px;stroke:var(--ink);}
+  .fp-split .btn{margin-top:30px;}
   .fp-split-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);}
   .fp-split-photo img{width:100%;height:100%;object-fit:cover;}
 
@@ -215,18 +242,30 @@
 </script>
 
 <header class="fp-hero">
+  <div class="glow-l" aria-hidden="true"></div>
+  <div class="glow-r" aria-hidden="true"></div>
   <div class="wrap">
+    <div class="eyebrow no-dot">Funding Program</div>
     <h1>Faith-Based Funding Solutions</h1>
     <p class="sub">Funding solutions built for churches, ministries, and faith-based organizations ready to start, scale, or grow.</p>
     <a class="btn btn-primary" href="https://form.jotform.com/dominatetoday/quickfundingapplication" target="_blank" rel="noopener">Apply Now</a>
-  </div>
-</header>
 
-<section class="fp-bullets">
-  <div class="wrap">
-    <div class="fp-bullet">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-      <p>Faith-Based Organizations Qualify for ALL of the funding programs, so feel free to APPLY for the appropriate funding program based on the qualifications listed.</p>
+    <div class="fp-hero-divider"></div>
+
+    <div class="fp-step-tag on-light"><div class="num">01</div><div class="lbl">How It Works</div></div>
+    <div class="fp-bullet-panel">
+      <div class="fp-bullet">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <p>Faith-Based Organizations Qualify for ALL of the funding programs, so feel free to APPLY for the appropriate funding program based on the qualifications listed.</p>
+      </div>
+      <div class="fp-bullet">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <p>Not sure which program fits? Fill out our short questionnaire and we'll match you with the funding solution that fits your organization's needs.</p>
+      </div>
+      <div class="fp-bullet">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <p>We provide Coaching, Consulting, Packaging and Strategy Sessions tailored for Faith-Based Organizations.</p>
+      </div>
     </div>
 
     <div class="fp-link-row">
@@ -236,20 +275,14 @@
       <a href="real-estate-investment-funding.html">Real Estate Funding</a>
       <a href="commercial-funding.html">Commercial Funding</a>
     </div>
-
-    <div class="fp-bullet" style="margin-top:44px;">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-      <p>Not sure which program fits? Fill out our short questionnaire and we'll match you with the funding solution that fits your organization's needs.</p>
-    </div>
-    <div class="fp-bullet">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-      <p>We provide Coaching, Consulting, Packaging and Strategy Sessions tailored for Faith-Based Organizations.</p>
-    </div>
   </div>
-</section>
+</header>
 
 <section class="fp-consult">
+  <div class="glow-l" aria-hidden="true"></div>
+  <div class="glow-r" aria-hidden="true"></div>
   <div class="wrap">
+    <div class="eyebrow no-dot on-dark">Consultation</div>
     <h2>Funding Qualifications Are Case-By-Case</h2>
     <p>We Highly Recommend That You Schedule-A-Consultation so we can walk through your organization's specific funding needs and match you with the right program.</p>
     <a class="btn btn-primary" href="https://calendly.com/getyourappointmentnow/businessfundingblueprintsstrategy?month=2024-01" target="_blank" rel="noopener">Schedule a Consultation</a>
@@ -260,11 +293,13 @@
   <div class="wrap">
     <div class="fp-split-grid">
       <div class="fp-split-photo">
-        <img src="../ChatGPT Image Jul 19, 2026, 05_55_40 PM.png" alt="Faith-based organization funding" />
+        <img src="../ChatGPT Image Jul 19, 2026, 04_53_37 PM.png" alt="Faith-based organization funding" />
       </div>
       <div>
+        <div class="fp-split-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
         <h2>Who Benefits?</h2>
         <p style="margin-top:18px;">Faith-based organizations that need funding to start, scale, grow, or funding to purchase, refinance or renovate a facility.</p>
+        <a class="btn btn-primary" href="https://form.jotform.com/dominatetoday/quickfundingapplication" target="_blank" rel="noopener">Apply Now</a>
       </div>
     </div>
   </div>
