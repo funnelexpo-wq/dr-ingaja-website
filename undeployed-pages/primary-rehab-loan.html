@@ -61,11 +61,12 @@
   .mobile-menu a:last-child{border-bottom:none;}
   .mobile-menu .m-group-label{padding:14px 4px 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
 
-  .mp-hero{position:relative;min-height:460px;display:flex;align-items:center;overflow:hidden;color:#fff;}
+  .mp-hero{position:relative;min-height:460px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;color:#fff;}
   .mp-hero-bg{position:absolute;inset:0;z-index:0;}
   .mp-hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.55);}
   .mp-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg, rgba(15,16,19,.96) 20%, rgba(15,16,19,.55) 65%, rgba(15,16,19,.3));}
-  .mp-hero-inner{position:relative;z-index:1;padding:90px 0 76px;max-width:700px;}
+  .mp-hero .glow-r{position:absolute;bottom:-25%;right:-10%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.26) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-hero-inner{position:relative;z-index:1;padding:90px 0 76px;max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
   .mp-ribbon{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:8px 16px 8px 8px;margin-bottom:26px;}
   .mp-ribbon .stars{display:flex;gap:1px;}
   .mp-ribbon .stars svg{width:11px;height:11px;fill:var(--gold-300);}
@@ -75,6 +76,7 @@
   .mp-hero h1 .line.accent-gold{color:var(--gold-300);}
   .mp-hero .sub{margin-top:20px;font-size:16.5px;color:#c4c2ba;max-width:52ch;}
   .mp-cta-row{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .mp-hero .mp-cta-row{justify-content:center;}
 
   .mp-question{background:var(--gold-grad);padding:66px 0;text-align:center;}
   .mp-question h2{color:var(--ink);max-width:900px;margin:0 auto;}
@@ -82,7 +84,7 @@
   .mp-info{padding:110px 0;}
   .mp-info-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;}
   @media (max-width:900px){.mp-info-grid{grid-template-columns:1fr;gap:40px;}}
-  .mp-blob{position:relative;aspect-ratio:1/1;border-radius:42% 58% 63% 37% / 41% 42% 58% 59%;overflow:hidden;box-shadow:var(--shadow);}
+  .mp-blob{position:relative;aspect-ratio:1/1;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);}
   .mp-blob img{width:100%;height:100%;object-fit:cover;}
   .mp-timeline{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:22px;}
   .mp-timeline li{display:flex;gap:16px;}
@@ -91,7 +93,11 @@
   .mp-badge-pill{display:inline-block;background:var(--slate-100);border:1px solid var(--slate-200);color:var(--gold-700);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:7px 16px;border-radius:99px;margin-bottom:16px;}
 
   .mp-final{position:relative;background:var(--ink);padding:90px 0;text-align:center;overflow:hidden;}
-  .mp-final::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:2px;background:var(--gold-grad);}
+  .mp-final::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:2px;background:var(--gold-grad);z-index:2;}
+  .mp-final .pattern{position:absolute;inset:0;background:url('../6225087.jpg') center/cover;opacity:.015;z-index:0;}
+  .mp-final .glow-l{position:absolute;top:-30%;left:-12%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.24) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-final .glow-r{position:absolute;bottom:-30%;right:-12%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.24) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-final .wrap{position:relative;z-index:1;}
   .mp-final h2{color:#fff;max-width:22ch;margin:0 auto;}
   .mp-final .mp-cta-row{justify-content:center;margin-top:30px;}
   .mp-final p{color:#c4c2ba;max-width:52ch;margin:14px auto 0;}
@@ -143,25 +149,25 @@
           <div class="drop-label">Business Funding<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="drop-menu">
             <a href="quick-funding.html">Quick Personal Funding</a>
-            <a href="coaching-funding.html">Coach Funding</a>
-            <a href="business-funding.html">Business Funding</a>
+            <a href="../coaching-funding.html">Coach Funding</a>
+            <a href="../business-funding.html">Business Funding</a>
             <a href="real-estate-investment-funding.html">Real Estate Investment Funding</a>
-            <a href="commercial-funding.html">Commercial Funding</a>
-            <a href="faith-based-funding.html">Faith-Based Funding</a>
+            <a href="../commercial-funding.html">Commercial Funding</a>
+            <a href="../faith-based-funding.html">Faith-Based Funding</a>
           </div>
         </div>
         <div class="nav-drop">
           <div class="drop-label">Business Credit Builders<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="drop-menu">
-            <a href="business-credit-builder.html">The Ultimate Business Credit Builder</a>
+            <a href="../business-credit-builder.html">The Ultimate Business Credit Builder</a>
           </div>
         </div>
         <div class="nav-drop">
           <div class="drop-label">Primary Residence Options<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="drop-menu">
             <a href="self-employed-primary-residence.html">Self-Employed Primary Residence</a>
-            <a href="first-time-homebuyers.html">First Time Homebuyers</a>
-            <a href="fha-loan.html">FHA Financing</a>
+            <a href="../first-time-homebuyers.html">First Time Homebuyers</a>
+            <a href="../fha-loan.html">FHA Financing</a>
             <a href="va-loan.html">VA Financing</a>
             <a href="jumbo-loan.html">Jumbo Loan</a>
             <a href="primary-rehab-loan.html">Primary Rehab</a>
@@ -192,17 +198,17 @@
     <a href="../testimonials.html">Testimonials</a>
     <div class="m-group-label">Business Funding</div>
     <a href="quick-funding.html">Quick Personal Funding</a>
-    <a href="coaching-funding.html">Coach Funding</a>
-    <a href="business-funding.html">Business Funding</a>
+    <a href="../coaching-funding.html">Coach Funding</a>
+    <a href="../business-funding.html">Business Funding</a>
     <a href="real-estate-investment-funding.html">Real Estate Investment Funding</a>
-    <a href="commercial-funding.html">Commercial Funding</a>
-    <a href="faith-based-funding.html">Faith-Based Funding</a>
+    <a href="../commercial-funding.html">Commercial Funding</a>
+    <a href="../faith-based-funding.html">Faith-Based Funding</a>
     <div class="m-group-label">Business Credit Builders</div>
-    <a href="business-credit-builder.html">The Ultimate Business Credit Builder</a>
+    <a href="../business-credit-builder.html">The Ultimate Business Credit Builder</a>
     <div class="m-group-label">Primary Residence Options</div>
     <a href="self-employed-primary-residence.html">Self-Employed Primary Residence</a>
-    <a href="first-time-homebuyers.html">First Time Homebuyers</a>
-    <a href="fha-loan.html">FHA Financing</a>
+    <a href="../first-time-homebuyers.html">First Time Homebuyers</a>
+    <a href="../fha-loan.html">FHA Financing</a>
     <a href="va-loan.html">VA Financing</a>
     <a href="jumbo-loan.html">Jumbo Loan</a>
     <a href="primary-rehab-loan.html">Primary Rehab</a>
@@ -224,6 +230,7 @@
 
 <header class="mp-hero">
   <div class="mp-hero-bg"><img src="../ChatGPT Image Jul 19, 2026, 04_54_50 PM.png" alt="" /></div>
+  <div class="glow-r"></div>
   <div class="wrap mp-hero-inner">
     <div class="mp-ribbon">
       <div class="stars">
@@ -275,6 +282,9 @@
 </section>
 
 <section class="mp-final">
+  <div class="pattern"></div>
+  <div class="glow-l"></div>
+  <div class="glow-r"></div>
   <div class="wrap">
     <h2>Ready to Fix Up Your Fixer Upper?</h2>
     <p>One of our mortgage specialists would be happy to answer all of your questions.</p>
@@ -325,8 +335,8 @@
         <h4>Primary Residence Options</h4>
         <ul>
           <li><a href="self-employed-primary-residence.html">Self-Employed Primary Residence</a></li>
-          <li><a href="first-time-homebuyers.html">First Time Homebuyers</a></li>
-          <li><a href="fha-loan.html">FHA Loan</a></li>
+          <li><a href="../first-time-homebuyers.html">First Time Homebuyers</a></li>
+          <li><a href="../fha-loan.html">FHA Loan</a></li>
           <li><a href="va-loan.html">VA Loan</a></li>
           <li><a href="jumbo-loan.html">Jumbo Loan</a></li>
           <li><a href="primary-rehab-loan.html">Primary Rehab Loan</a></li>
