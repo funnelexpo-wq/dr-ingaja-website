@@ -45,23 +45,23 @@
   nav .row{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;gap:28px;}
   .logo-img{height:38px;width:auto;}
   .logo-img.footer{height:36px;margin-bottom:20px;}
-  .navlinks{display:flex;flex-direction:column;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
-  .nav-row{display:flex;gap:22px;white-space:nowrap;}
+  .navlinks{display:flex;flex-direction:column;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
+  .nav-row{display:flex;justify-content:center;gap:22px;white-space:nowrap;}
   .navlinks a{position:relative;padding-bottom:4px;}
   .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold-grad);transition:width .22s var(--ease-out);}
   .navlinks a:hover, .navlinks a.active{color:var(--gold-700);}
   .navlinks a:hover::after, .navlinks a.active::after{width:100%;}
   @media (max-width:1180px){.navlinks{display:none;}}
 
-  .nav-drop{position:relative;}
+  .nav-drop{position:relative;z-index:10;}
   .nav-drop>.drop-label{display:flex;align-items:center;gap:5px;cursor:pointer;padding-bottom:5px;}
   .nav-drop>.drop-label svg{width:11px;height:11px;stroke:currentColor;transition:transform .18s var(--ease-out);}
-  .nav-drop:hover>.drop-label, .nav-drop.active>.drop-label{color:var(--gold-700);}
+  .nav-drop:hover>.drop-label{color:var(--gold-700);}
   .nav-drop:hover>.drop-label svg{transform:rotate(180deg);}
-  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:40px;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
+  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:0;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
   .nav-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
-  .drop-menu a:hover, .drop-menu a.active{background:var(--slate-100);color:var(--gold-700);}
+  .drop-menu a:hover{background:var(--slate-100);color:var(--gold-700);}
 
   .nav-actions{display:flex;align-items:center;gap:14px;}
   .nav-burger{display:none;flex-direction:column;gap:5px;width:26px;cursor:pointer;background:none;border:none;padding:6px;}
@@ -83,76 +83,60 @@
   .page-hero .glow-orb{position:absolute;right:-10%;bottom:-40%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle, rgba(255,196,84,.85) 0%, rgba(238,168,46,.35) 45%, rgba(238,168,46,0) 72%);filter:blur(2px);pointer-events:none;}
   .page-hero .wrap{position:relative;z-index:1;}
   .page-hero p{color:#c9c7bd;margin-top:16px;max-width:50ch;font-size:16.5px;}
-  .page-hero .crumb{font-size:13.5px;font-weight:600;color:#c9c7bd;margin-top:14px;}
+  .page-hero .crumb{font-size:13.5px;font-weight:600;color:#c9c7bd;margin-top:0;}
   .page-hero .crumb a:hover{color:var(--gold-300);}
   .page-hero .crumb .sep{margin:0 8px;color:#6f6e67;}
 
   /* ---------- INTRO VIDEO ---------- */
-  .bo-video-outer{background:var(--ink);color:#fff;padding:100px 0;text-align:center;position:relative;overflow:hidden;}
-  .bo-video-outer::after{content:"";position:absolute;inset:0;background-image:url('6225087.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.04;pointer-events:none;}
+  .bo-video-outer{background:var(--paper);color:var(--ink);padding:100px 0;text-align:center;position:relative;overflow:hidden;}
   .bo-video-outer>.wrap{position:relative;z-index:1;}
-  .bo-video{position:relative;max-width:820px;margin:0 auto;border-radius:20px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);}
-  .bo-video img{width:100%;height:100%;object-fit:cover;opacity:.75;}
-  .bo-video .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);}
+  .bo-video{position:relative;max-width:820px;margin:0 auto;border-radius:20px;overflow:hidden;aspect-ratio:16/9;box-shadow:var(--shadow);border:1px solid var(--slate-200);}
+  .bo-video img{width:100%;height:100%;object-fit:cover;opacity:.9;}
+  .bo-video .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.35);}
   .bo-video .play svg{width:24px;height:24px;fill:var(--ink);margin-left:3px;}
   .bo-video-outer .btn{margin-top:36px;}
 
-  .section{padding:120px 0 160px;}
+  .section{padding:110px 0;}
   .section-head{max-width:820px;margin:0 auto;text-align:center;}
+  .section.dark{background:var(--ink);color:#fff;position:relative;overflow:hidden;}
+  .section.dark::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);}
+  .section.dark .section-head h2{color:#fff;}
+  .section.dark .section-head p{color:#c4c2ba;margin-top:10px;}
 
   /* ---------- PATH STRIP ---------- */
-  .path-strip{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
-  @media (max-width:820px){.path-strip{grid-template-columns:1fr 1fr;}}
-  @media (max-width:480px){.path-strip{grid-template-columns:1fr;}}
-  .path-step{background:#fff;border:1px solid var(--slate-200);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);}
+  .path-strip{margin-top:56px;display:flex;justify-content:space-between;gap:16px;position:relative;}
+  .path-strip::before{content:"";position:absolute;top:14px;left:8%;right:8%;height:1px;background:rgba(255,255,255,.15);z-index:0;}
+  .path-step{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;text-align:center;}
   .path-step .num{width:28px;height:28px;border-radius:50%;background:var(--gold-grad);color:var(--ink);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .path-step span{font-size:13px;font-weight:700;color:var(--ink);}
+  .path-step span{font-size:13px;font-weight:700;color:#fff;}
+  @media (max-width:820px){.path-strip{flex-wrap:wrap;}.path-strip::before{display:none;}.path-step{flex:1 1 40%;}}
 
   /* ---------- TIER GRID ---------- */
-  .tier-grid{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .tier-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:stretch;}
   @media (max-width:1100px){.tier-grid{grid-template-columns:1fr 1fr;}}
   @media (max-width:640px){.tier-grid{grid-template-columns:1fr;}}
-  .tier{border-radius:24px;padding:40px 30px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .2s var(--ease-out), box-shadow .2s var(--ease-out);}
-  .tier:hover{transform:translateY(-6px);}
-  .tier.t1{background:var(--ink);color:#fff;box-shadow:0 20px 40px -22px rgba(0,0,0,.5);}
-  .tier.t2{background:#1E2027;color:#fff;box-shadow:0 20px 40px -22px rgba(0,0,0,.5);}
-  .tier.t3{background:#fff;color:var(--ink);border:1px solid var(--slate-200);box-shadow:var(--shadow);}
-  .tier.t4{background:var(--gold-grad);color:var(--ink);box-shadow:0 24px 50px -20px rgba(184,146,46,.5);}
+  .tier{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:36px 28px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .2s var(--ease-out), box-shadow .2s var(--ease-out), border-color .2s var(--ease-out);}
+  .tier:hover{transform:translateY(-6px);border-color:rgba(221,183,78,.35);}
+  .tier.featured{background:rgba(221,183,78,.08);border:1.5px solid var(--gold-500);box-shadow:0 24px 50px -20px rgba(184,146,46,.45);}
+  @media (min-width:1101px){.tier.featured{transform:scale(1.045);}.tier.featured:hover{transform:scale(1.045) translateY(-6px);}}
   .tier .tier-ic{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-bottom:20px;}
-  .tier.t3 .tier-ic{background:var(--slate-100);}
-  .tier.t4 .tier-ic{background:rgba(23,24,28,.1);}
-  .tier .tier-ic svg{width:19px;height:19px;}
-  .tier.t1 .tier-ic svg, .tier.t2 .tier-ic svg{stroke:var(--gold-300);}
-  .tier.t3 .tier-ic svg{stroke:var(--gold-700);}
-  .tier.t4 .tier-ic svg{stroke:var(--ink);}
-  .tier .name{font-family:var(--font-display);font-weight:800;font-size:21px;}
-  .tier.t1 .name, .tier.t2 .name{color:var(--gold-300);}
-  .tier.t4 .name{color:var(--ink);}
+  .tier .tier-ic svg{width:19px;height:19px;stroke:var(--gold-300);}
+  .tier .name{font-family:var(--font-display);font-weight:800;font-size:21px;color:var(--gold-300);}
   .tier .kicker{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-top:6px;opacity:.7;}
   .tier .price{font-family:var(--font-display);font-weight:800;font-size:26px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);}
-  .tier.t3 .price{border-top-color:var(--slate-200);}
-  .tier.t4 .price{border-top-color:rgba(23,24,28,.15);}
   .tier .price + .price-sub{font-size:12px;margin-top:2px;opacity:.65;}
   .tier ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px;flex:1;}
-  .tier li{display:flex;gap:9px;font-size:13px;line-height:1.5;}
-  .tier li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;}
-  .tier.t1 li svg, .tier.t2 li svg{stroke:var(--gold-300);}
-  .tier.t3 li svg{stroke:var(--gold-700);}
-  .tier.t4 li svg{stroke:var(--ink);}
-  .tier.t3 p, .tier.t3 li{color:var(--slate-600);}
-  .tier.t4 li{color:rgba(23,24,28,.8);}
+  .tier li{display:flex;gap:9px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.72);}
+  .tier li svg{width:14px;height:14px;flex-shrink:0;margin-top:3px;stroke:var(--gold-300);}
   .tier .btn{margin-top:28px;width:100%;justify-content:center;}
 
   /* ---------- FAQ / CLOSING CTA ---------- */
-  .faq-outer{background:var(--ink);color:#fff;position:relative;overflow:hidden;}
-  .faq-outer::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);}
-  .faq-outer .section-head h2{color:#fff;}
-  .faq-outer .section-head p{color:#c4c2ba;margin-top:14px;}
-  .faq-grid{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.1);border-radius:24px;overflow:hidden;}
+  .faq-outer .section-head p{color:var(--slate-600);margin-top:10px;}
+  .faq-grid{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--slate-200);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);}
   @media (max-width:820px){.faq-grid{grid-template-columns:1fr;}}
-  .faq-card{background:#1E2027;padding:48px 44px;text-align:center;}
-  .faq-card h3{font-size:21px;color:#fff;}
-  .faq-card p{font-size:13.5px;margin-top:10px;color:#a6a49b;}
+  .faq-card{background:#fff;padding:48px 44px;text-align:center;}
+  .faq-card h3{font-size:21px;color:var(--ink);}
+  .faq-card p{font-size:13.5px;margin-top:10px;color:var(--slate-600);}
   .faq-card .btn{margin-top:26px;}
 
   /* ---------- LEGAL ---------- */
@@ -233,7 +217,7 @@
         </div>
       </div>
       <div class="nav-row">
-        <a href="business-opportunities.html" class="active">Business Opportunities</a>
+        <a href="business-opportunities.html">Business Opportunities</a>
         <a href="business-resources.html">Business Resources</a>
         <a href="refer-a-friend.html">Refer-A-Friend</a>
         <a href="contact.html">Contact</a>
@@ -270,7 +254,6 @@
     <a href="undeployed-pages/primary-rehab-loan.html">Primary Rehab</a>
     <a href="undeployed-pages/vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
     <a href="undeployed-pages/fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
-    <div class="m-group-label">More</div>
     <a href="business-opportunities.html">Business Opportunities</a>
     <a href="business-resources.html">Business Resources</a>
     <a href="refer-a-friend.html">Refer-A-Friend</a>
@@ -305,10 +288,10 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section dark">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow no-dot">Four Levels of Participation</div>
+      <div class="eyebrow no-dot on-dark">Four Levels of Participation</div>
       <h2>Learn how to start your business or update your existing business with Business Credit Funding advantages.</h2>
     </div>
 
@@ -320,7 +303,7 @@
     </div>
 
     <div class="tier-grid">
-      <div class="tier t1">
+      <div class="tier">
         <div class="tier-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
         <div class="name">Signature Level</div>
         <div class="kicker">Referral System</div>
@@ -331,7 +314,7 @@
         <a class="btn btn-outline on-dark" href="https://form.jotform.com/dominatetoday/affiliateinquiryform" target="_blank" rel="noopener">Join For Free Now</a>
       </div>
 
-      <div class="tier t2">
+      <div class="tier featured">
         <div class="tier-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
         <div class="name">Elite Level</div>
         <div class="kicker">Funding Agent</div>
@@ -348,7 +331,7 @@
         <a class="btn btn-primary" href="https://payhip.com/b/Y7reA" target="_blank" rel="noopener">Sign Up Now</a>
       </div>
 
-      <div class="tier t3">
+      <div class="tier">
         <div class="tier-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.6h7.6z"/></svg></div>
         <div class="name">Executive Level</div>
         <div class="kicker">Become Your Own Broker</div>
@@ -359,10 +342,10 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Get full access to lenders, contracts, marketing, training</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>5 Days Broker Training</li>
         </ul>
-        <a class="btn btn-outline" href="https://form.jotform.com/dominatetoday/affiliateinquiryform" target="_blank" rel="noopener">Sign Up Now</a>
+        <a class="btn btn-outline on-dark" href="https://form.jotform.com/dominatetoday/affiliateinquiryform" target="_blank" rel="noopener">Sign Up Now</a>
       </div>
 
-      <div class="tier t4">
+      <div class="tier">
         <div class="tier-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg></div>
         <div class="name">Legacy Level</div>
         <div class="kicker">Become Your Own Broker &amp; Unilevel MLM</div>
@@ -375,7 +358,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>10 Days Broker Training</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Complete Turnkey System</li>
         </ul>
-        <a class="btn btn-outline" href="https://form.jotform.com/dominatetoday/affiliateinquiryform" target="_blank" rel="noopener" style="background:var(--ink);color:#fff;">Sign Up Now</a>
+        <a class="btn btn-outline on-dark" href="https://form.jotform.com/dominatetoday/affiliateinquiryform" target="_blank" rel="noopener">Sign Up Now</a>
       </div>
     </div>
   </div>
@@ -384,7 +367,7 @@
 <section class="section faq-outer">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow no-dot on-dark">Got Questions?</div>
+      <div class="eyebrow no-dot">Got Questions?</div>
       <h2>Review levels below, sign up, or schedule a consultation.</h2>
       <p>Not sure which level is right for you? Submit an inquiry or talk it through directly with our team.</p>
     </div>

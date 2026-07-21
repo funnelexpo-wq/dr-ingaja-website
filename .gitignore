@@ -1,0 +1,6 @@
+# Unrelated project living inside this folder — never part of this repo
+Zihad/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

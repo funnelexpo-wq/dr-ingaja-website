@@ -44,23 +44,23 @@
   nav .row{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;gap:28px;}
   .logo-img{height:38px;width:auto;}
   .logo-img.footer{height:36px;margin-bottom:20px;}
-  .navlinks{display:flex;flex-direction:column;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
-  .nav-row{display:flex;gap:22px;white-space:nowrap;}
+  .navlinks{display:flex;flex-direction:column;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
+  .nav-row{display:flex;justify-content:center;gap:22px;white-space:nowrap;}
   .navlinks a{position:relative;padding-bottom:4px;}
   .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold-grad);transition:width .22s var(--ease-out);}
   .navlinks a:hover, .navlinks a.active{color:var(--gold-700);}
   .navlinks a:hover::after, .navlinks a.active::after{width:100%;}
   @media (max-width:1180px){.navlinks{display:none;}}
 
-  .nav-drop{position:relative;}
+  .nav-drop{position:relative;z-index:10;}
   .nav-drop>.drop-label{display:flex;align-items:center;gap:5px;cursor:pointer;padding-bottom:5px;}
   .nav-drop>.drop-label svg{width:11px;height:11px;stroke:currentColor;transition:transform .18s var(--ease-out);}
-  .nav-drop:hover>.drop-label, .nav-drop.active>.drop-label{color:var(--gold-700);}
+  .nav-drop:hover>.drop-label{color:var(--gold-700);}
   .nav-drop:hover>.drop-label svg{transform:rotate(180deg);}
-  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:40px;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
+  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:0;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
   .nav-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
-  .drop-menu a:hover, .drop-menu a.active{background:var(--slate-100);color:var(--gold-700);}
+  .drop-menu a:hover{background:var(--slate-100);color:var(--gold-700);}
 
   .nav-actions{display:flex;align-items:center;gap:14px;}
   .nav-burger{display:none;flex-direction:column;gap:5px;width:26px;cursor:pointer;background:none;border:none;padding:6px;}
@@ -81,7 +81,7 @@
   .page-hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);z-index:2;}
   .page-hero .glow-orb{position:absolute;right:-10%;bottom:-40%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle, rgba(255,196,84,.85) 0%, rgba(238,168,46,.35) 45%, rgba(238,168,46,0) 72%);filter:blur(2px);pointer-events:none;}
   .page-hero .wrap{position:relative;z-index:1;}
-  .page-hero .crumb{font-size:13.5px;font-weight:600;color:#c9c7bd;margin-top:14px;}
+  .page-hero .crumb{font-size:13.5px;font-weight:600;color:#c9c7bd;margin-top:0;}
   .page-hero .crumb a:hover{color:var(--gold-300);}
   .page-hero .crumb .sep{margin:0 8px;color:#6f6e67;}
 
@@ -99,7 +99,7 @@
   .ceo-photo-badge span{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-700);}
 
   .ceo-name-row{display:flex;align-items:baseline;gap:22px;flex-wrap:wrap;}
-  .ceo-role{font-size:15px;font-weight:700;color:var(--slate-600);margin-top:14px;}
+  .ceo-role{font-size:15px;font-weight:700;color:var(--slate-600);margin-top:0;}
   .ceo-meta{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:34px;padding:26px 30px;background:#fff;border:1px solid var(--slate-200);border-radius:18px;box-shadow:var(--shadow);flex-wrap:wrap;}
   .ceo-stat-inline{display:flex;align-items:center;gap:16px;}
   .ceo-stat-inline .ic{width:50px;height:50px;border-radius:50%;background:var(--slate-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -169,11 +169,11 @@
     <div class="navlinks">
       <div class="nav-row">
         <a href="homepage.html">Home</a>
-        <div class="nav-drop active">
+        <div class="nav-drop">
           <div class="drop-label">About Us<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="drop-menu">
             <a href="our-company.html">Our Company</a>
-            <a href="meet-our-ceo.html" class="active">Meet our CEO</a>
+            <a href="meet-our-ceo.html">Meet our CEO</a>
             <a href="testimonials.html">Testimonials</a>
           </div>
         </div>
@@ -246,7 +246,6 @@
     <a href="undeployed-pages/primary-rehab-loan.html">Primary Rehab</a>
     <a href="undeployed-pages/vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
     <a href="undeployed-pages/fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
-    <div class="m-group-label">More</div>
     <a href="business-opportunities.html">Business Opportunities</a>
     <a href="business-resources.html">Business Resources</a>
     <a href="refer-a-friend.html">Refer-A-Friend</a>

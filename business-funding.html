@@ -1,4 +1,4 @@
-<title>Real Estate Investment Funding — Empire Funding &amp; Capital Solutions</title>
+<title>Business Funding — Empire Funding &amp; Capital Solutions</title>
 <style>
   :root{
     --ink:#17181C; --charcoal:#1E2027; --paper:#F8F6F2;
@@ -24,13 +24,22 @@
   img{max-width:100%;display:block;}
   .wrap{max-width:1450px;margin:0 auto;padding:0 32px;}
   .gold-text{color:var(--gold-700);}
+
   a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible{outline:none;box-shadow:var(--focus-ring);border-radius:6px;}
+
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);background:var(--slate-100);border:1px solid var(--slate-200);padding:6px 14px;border-radius:99px;margin-bottom:16px;}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-500);}
+  .eyebrow.on-dark{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--gold-300);}
+  .eyebrow.no-dot::before{display:none;}
+
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;padding:16px 28px;border-radius:99px;border:none;cursor:pointer;font-family:var(--font-body);transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out);white-space:nowrap;}
   .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(184,146,46,.55);}
   .btn-primary{background:var(--gold-grad);color:var(--ink);box-shadow:0 8px 20px -6px rgba(184,146,46,.4);}
+  .btn-outline{background:#fff;border:1.5px solid var(--ink);color:var(--ink);}
+  .btn-outline.on-dark{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;}
   .btn-sm{padding:11px 20px;font-size:13px;}
 
+  /* ---------- NAV ---------- */
   nav{position:sticky;top:0;z-index:60;background:rgba(248,246,242,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--slate-200);}
   nav .row{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;gap:28px;}
   .logo-img{height:38px;width:auto;}
@@ -52,60 +61,94 @@
   .nav-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0);}
   .drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
   .drop-menu a:hover{background:var(--slate-100);color:var(--gold-700);}
+
   .nav-actions{display:flex;align-items:center;gap:14px;}
   .nav-burger{display:none;flex-direction:column;gap:5px;width:26px;cursor:pointer;background:none;border:none;padding:6px;}
   .nav-burger span{display:block;height:2px;background:var(--ink);border-radius:2px;}
   @media (max-width:1180px){.nav-burger{display:flex;}}
+
   .mobile-menu{display:none;flex-direction:column;padding:10px 32px 26px;border-top:1px solid var(--slate-200);}
   .mobile-menu.open{display:flex;}
   .mobile-menu a{padding:12px 4px;font-size:14.5px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--slate-200);}
   .mobile-menu a:last-child{border-bottom:none;}
   .mobile-menu .m-group-label{padding:14px 4px 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
 
-  .fp-hero{background:var(--ink);color:#fff;padding:90px 0 80px;position:relative;overflow:hidden;}
-  .fp-hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);}
-  .fp-hero h1{color:#fff;max-width:16ch;}
-  .fp-hero .sub{margin-top:0;font-size:15.5px;color:#c4c2ba;max-width:44ch;}
-  .fp-hero-grid{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;}
-  @media (max-width:820px){.fp-hero-grid{grid-template-columns:1fr;text-align:center;}.fp-hero-grid .fp-seal{margin:0 auto;}.fp-hero .sub{margin-left:auto;margin-right:auto;}}
-  .fp-video{position:relative;max-width:620px;margin-top:24px;border-radius:16px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);}
-  .fp-video img{width:100%;height:100%;object-fit:cover;opacity:.55;filter:grayscale(.3);}
-  .fp-video::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg, rgba(15,16,19,.85), rgba(15,16,19,.5));}
-  .fp-video .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;z-index:1;}
-  .fp-video .play svg{width:20px;height:20px;fill:#fff;margin-left:3px;}
-  .fp-video-label{position:absolute;bottom:20px;left:24px;right:24px;z-index:1;text-align:left;}
-  .fp-video-label .t{font-family:var(--font-display);font-weight:800;font-size:16px;color:#fff;line-height:1.35;}
-  .fp-seal{width:170px;height:170px;border-radius:50%;background:var(--gold-grad);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;box-shadow:0 20px 44px -14px rgba(0,0,0,.5);flex-shrink:0;}
-  .fp-seal .stars{display:flex;gap:2px;margin-bottom:6px;}
-  .fp-seal .stars svg{width:12px;height:12px;fill:var(--ink);}
-  .fp-seal .n{font-family:var(--font-display);font-weight:800;font-size:19px;color:var(--ink);line-height:1.15;}
-  .fp-seal .l{font-size:9.5px;font-weight:800;color:rgba(23,24,28,.8);line-height:1.3;margin-top:4px;text-transform:uppercase;letter-spacing:.02em;}
-  .fp-cta-band{background:var(--paper);padding:64px 0 0;text-align:center;}
-  .fp-headline{max-width:820px;margin:36px auto 0;text-align:center;}
+  /* ---------- FUNDING PROGRAM SHARED SHELL ---------- */
+  .fp-hero{background:var(--paper);color:var(--ink);padding:88px 0 80px;position:relative;overflow:hidden;}
+  .fp-hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);z-index:2;}
+  .fp-hero .glow-l{position:absolute;top:-14%;left:-8%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.28) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-hero .glow-r{position:absolute;bottom:-20%;right:-8%;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.22) 0%, rgba(221,183,78,0) 70%);pointer-events:none;}
+  .fp-hero .wrap{position:relative;z-index:1;}
+  .fp-hero h1{color:var(--ink);}
+  .fp-hero-inner{text-align:center;}
+  .fp-hero-sub{max-width:620px;margin:14px auto 0;font-size:17px;color:var(--slate-600);}
+  .fp-video{position:relative;max-width:760px;margin:32px auto 0;border-radius:20px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 40px 70px -24px rgba(20,20,15,.3);border:1px solid var(--slate-200);}
+  .fp-video img{width:100%;height:100%;object-fit:cover;opacity:.95;}
+  .fp-video::after{content:"";position:absolute;inset:0;background:rgba(15,16,19,.15);}
+  .fp-video .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);z-index:1;}
+  .fp-video .play::before{content:"";position:absolute;inset:-10px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);animation:fpPulse 2.4s ease-out infinite;}
+  .fp-video .play svg{width:23px;height:23px;fill:var(--ink);margin-left:3px;}
+  @keyframes fpPulse{0%{transform:scale(.85);opacity:1;}100%{transform:scale(1.35);opacity:0;}}
+
+  .fp-trust-bar{position:relative;z-index:2;display:inline-flex;flex-direction:column;align-items:center;text-align:center;gap:6px;margin:-30px auto 0;background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:18px 32px;box-shadow:0 20px 40px -18px rgba(20,20,15,.3);}
+  .fp-trust-bar .stars{display:flex;gap:2px;}
+  .fp-trust-bar .stars svg{width:14px;height:14px;fill:var(--gold-500);}
+  .fp-trust-bar .n{font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--ink);}
+  .fp-trust-bar .l{font-size:12px;color:var(--slate-600);}
+
+  .fp-cta-band{background:var(--slate-100);border-top:1px solid var(--slate-200);border-bottom:1px solid var(--slate-200);padding:90px 0;text-align:center;}
+  .fp-headline{max-width:820px;margin:40px auto 0;text-align:center;padding-top:36px;border-top:1px solid var(--slate-200);}
   .fp-headline .amt{color:var(--gold-700);}
-  .fp-note{background:var(--slate-100);border:1px solid var(--slate-200);border-radius:14px;padding:20px 28px;max-width:520px;margin:28px auto 0;text-align:center;}
-  .fp-note .t{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);}
-  .fp-note .s{font-size:14px;color:var(--slate-600);margin-top:6px;}
-  .fp-req-section{padding:110px 0;}
-  .fp-req-section.dark{background:var(--ink);color:#fff;}
-  .fp-req-section.dark p, .fp-req-section.dark li{color:#c4c2ba;}
+  .fp-stat-row{display:flex;justify-content:center;gap:0;margin-top:32px;background:#fff;border:1px solid var(--slate-200);border-radius:18px;box-shadow:var(--shadow);max-width:560px;margin-left:auto;margin-right:auto;overflow:hidden;}
+  @media (max-width:560px){.fp-stat-row{flex-direction:column;}}
+  .fp-stat-cell{flex:1;padding:22px 24px;text-align:left;}
+  .fp-stat-cell + .fp-stat-cell{border-left:1px solid var(--slate-200);}
+  @media (max-width:560px){.fp-stat-cell + .fp-stat-cell{border-left:none;border-top:1px solid var(--slate-200);}}
+  .fp-stat-cell .t{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--slate-400);}
+  .fp-stat-cell .s{font-family:var(--font-display);font-weight:800;font-size:19px;color:var(--gold-700);margin-top:4px;}
+  .fp-hero-inner > .btn{margin-top:32px;}
+
+  .fp-step-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .fp-step-tag .num{width:26px;height:26px;border-radius:50%;background:rgba(221,183,78,.12);border:1px solid rgba(221,183,78,.35);color:var(--gold-300);font-family:var(--font-display);font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fp-step-tag .lbl{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
+  .fp-step-tag.on-dark .num{color:var(--gold-300);}
+  .fp-step-tag.on-dark .lbl{color:var(--gold-300);}
+  .fp-step-tag.on-light .num{background:var(--slate-100);border-color:var(--slate-200);color:var(--gold-700);}
+
+  .fp-req-section{padding:110px 0;position:relative;overflow:hidden;}
   .fp-req-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
   @media (max-width:900px){.fp-req-grid{grid-template-columns:1fr;gap:40px;}}
-  .fp-req-list{list-style:none;margin:0;padding:0;display:grid;gap:13px;}
-  .fp-req-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;}
-  .fp-req-list svg{width:16px;height:16px;flex-shrink:0;margin-top:4px;stroke:var(--gold-300);}
+  .fp-req-cards{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:520px){.fp-req-cards{grid-template-columns:1fr;}}
+  .fp-req-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;}
+  .fp-req-card .ic{width:30px;height:30px;border-radius:50%;background:rgba(221,183,78,.12);display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+  .fp-req-card .ic svg{width:14px;height:14px;stroke:var(--gold-300);}
+  .fp-req-card p{font-size:13.5px;line-height:1.55;color:#c4c2ba;margin:0;}
+  .fp-req-section.dark{background:var(--ink);color:#fff;}
+  .fp-req-section.dark::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);}
+  .fp-req-section.dark p{color:#c4c2ba;}
+  .fp-req-section.dark h2{color:#fff;}
   .fp-req-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);}
   .fp-req-photo img{width:100%;height:100%;object-fit:cover;}
-  .fp-split{padding:0 0 110px;}
-  .fp-split-copy ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px;}
-  .fp-split-copy ul li{display:flex;align-items:flex-start;gap:12px;font-size:16px;color:var(--slate-600);}
-  .fp-split-copy ul svg{width:16px;height:16px;flex-shrink:0;margin-top:5px;stroke:var(--gold-700);}
-  .fp-final-cta{padding:0 0 110px;text-align:center;}
+
+  .fp-split{padding:110px 0;}
+  .fp-split-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  @media (max-width:900px){.fp-split-grid{grid-template-columns:1fr;gap:40px;}}
+  .fp-split-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);}
+  .fp-split-photo img{width:100%;height:100%;object-fit:cover;}
+  .fp-split .btn{margin-top:30px;}
+  .fp-split.dark{background:var(--ink);color:#fff;}
+  .fp-split.dark p{color:#c4c2ba;}
+  .fp-split.dark h2, .fp-split.dark h3{color:#fff;}
+
+  /* ---------- LEGAL ---------- */
   .legal{background:var(--slate-100);padding:90px 0;border-top:1px solid var(--slate-200);}
   .legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
   @media (max-width:900px){.legal-grid{grid-template-columns:1fr;}}
   .legal h5{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);margin:0 0 10px;}
   .legal p{font-size:12px;line-height:1.7;color:var(--slate-600);}
+
+  /* ---------- FOOTER ---------- */
   footer{background:var(--ink);color:#fff;padding:130px 0 0;position:relative;overflow:hidden;}
   .footer-grid{display:grid;grid-template-columns:1.3fr 1px 1fr 1px 1fr 1px 1fr;gap:44px;padding-bottom:56px;position:relative;}
   @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}.footer-grid .fdiv{display:none;}}
@@ -132,27 +175,27 @@
 
 <nav>
   <div class="row wrap">
-    <a href="../homepage.html"><img class="logo-img" src="../logo-black-gold.png" alt="Empire Funding &amp; Capital Solutions" /></a>
+    <a href="homepage.html"><img class="logo-img" src="logo-black-gold.png" alt="Empire Funding &amp; Capital Solutions" /></a>
     <div class="navlinks">
       <div class="nav-row">
-        <a href="../homepage.html">Home</a>
+        <a href="homepage.html">Home</a>
         <div class="nav-drop">
           <div class="drop-label">About Us<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="drop-menu">
-            <a href="../our-company.html">Our Company</a>
-            <a href="../meet-our-ceo.html">Meet our CEO</a>
-            <a href="../testimonials.html">Testimonials</a>
+            <a href="our-company.html">Our Company</a>
+            <a href="meet-our-ceo.html">Meet our CEO</a>
+            <a href="testimonials.html">Testimonials</a>
           </div>
         </div>
         <div class="nav-drop">
           <div class="drop-label">Business Funding<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="drop-menu">
-            <a href="quick-funding.html">Quick Personal Funding</a>
-            <a href="coaching-funding.html">Coach Funding</a>
+            <a href="undeployed-pages/quick-funding.html">Quick Personal Funding</a>
+            <a href="undeployed-pages/coaching-funding.html">Coach Funding</a>
             <a href="business-funding.html">Business Funding</a>
-            <a href="real-estate-investment-funding.html">Real Estate Investment Funding</a>
-            <a href="commercial-funding.html">Commercial Funding</a>
-            <a href="faith-based-funding.html">Faith-Based Funding</a>
+            <a href="undeployed-pages/real-estate-investment-funding.html">Real Estate Investment Funding</a>
+            <a href="undeployed-pages/commercial-funding.html">Commercial Funding</a>
+            <a href="undeployed-pages/faith-based-funding.html">Faith-Based Funding</a>
           </div>
         </div>
         <div class="nav-drop">
@@ -164,22 +207,22 @@
         <div class="nav-drop">
           <div class="drop-label">Primary Residence Options<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
           <div class="drop-menu">
-            <a href="self-employed-primary-residence.html">Self-Employed Primary Residence</a>
-            <a href="first-time-homebuyers.html">First Time Homebuyers</a>
-            <a href="fha-loan.html">FHA Financing</a>
-            <a href="va-loan.html">VA Financing</a>
-            <a href="jumbo-loan.html">Jumbo Loan</a>
-            <a href="primary-rehab-loan.html">Primary Rehab</a>
-            <a href="vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
-            <a href="fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
+            <a href="undeployed-pages/self-employed-primary-residence.html">Self-Employed Primary Residence</a>
+            <a href="undeployed-pages/first-time-homebuyers.html">First Time Homebuyers</a>
+            <a href="undeployed-pages/fha-loan.html">FHA Financing</a>
+            <a href="undeployed-pages/va-loan.html">VA Financing</a>
+            <a href="undeployed-pages/jumbo-loan.html">Jumbo Loan</a>
+            <a href="undeployed-pages/primary-rehab-loan.html">Primary Rehab</a>
+            <a href="undeployed-pages/vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
+            <a href="undeployed-pages/fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
           </div>
         </div>
       </div>
       <div class="nav-row">
-        <a href="../business-opportunities.html">Business Opportunities</a>
-        <a href="../business-resources.html">Business Resources</a>
-        <a href="../refer-a-friend.html">Refer-A-Friend</a>
-        <a href="../contact.html">Contact</a>
+        <a href="business-opportunities.html">Business Opportunities</a>
+        <a href="business-resources.html">Business Resources</a>
+        <a href="refer-a-friend.html">Refer-A-Friend</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
     <div class="nav-actions">
@@ -190,33 +233,33 @@
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="../homepage.html">Home</a>
+    <a href="homepage.html">Home</a>
     <div class="m-group-label">About Us</div>
-    <a href="../our-company.html">Our Company</a>
-    <a href="../meet-our-ceo.html">Meet our CEO</a>
-    <a href="../testimonials.html">Testimonials</a>
+    <a href="our-company.html">Our Company</a>
+    <a href="meet-our-ceo.html">Meet our CEO</a>
+    <a href="testimonials.html">Testimonials</a>
     <div class="m-group-label">Business Funding</div>
-    <a href="quick-funding.html">Quick Personal Funding</a>
-    <a href="coaching-funding.html">Coach Funding</a>
+    <a href="undeployed-pages/quick-funding.html">Quick Personal Funding</a>
+    <a href="undeployed-pages/coaching-funding.html">Coach Funding</a>
     <a href="business-funding.html">Business Funding</a>
-    <a href="real-estate-investment-funding.html">Real Estate Investment Funding</a>
-    <a href="commercial-funding.html">Commercial Funding</a>
-    <a href="faith-based-funding.html">Faith-Based Funding</a>
+    <a href="undeployed-pages/real-estate-investment-funding.html">Real Estate Investment Funding</a>
+    <a href="undeployed-pages/commercial-funding.html">Commercial Funding</a>
+    <a href="undeployed-pages/faith-based-funding.html">Faith-Based Funding</a>
     <div class="m-group-label">Business Credit Builders</div>
     <a href="business-credit-builder.html">The Ultimate Business Credit Builder</a>
     <div class="m-group-label">Primary Residence Options</div>
-    <a href="self-employed-primary-residence.html">Self-Employed Primary Residence</a>
-    <a href="first-time-homebuyers.html">First Time Homebuyers</a>
-    <a href="fha-loan.html">FHA Financing</a>
-    <a href="va-loan.html">VA Financing</a>
-    <a href="jumbo-loan.html">Jumbo Loan</a>
-    <a href="primary-rehab-loan.html">Primary Rehab</a>
-    <a href="vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
-    <a href="fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
-    <a href="../business-opportunities.html">Business Opportunities</a>
-    <a href="../business-resources.html">Business Resources</a>
-    <a href="../refer-a-friend.html">Refer-A-Friend</a>
-    <a href="../contact.html">Contact</a>
+    <a href="undeployed-pages/self-employed-primary-residence.html">Self-Employed Primary Residence</a>
+    <a href="undeployed-pages/first-time-homebuyers.html">First Time Homebuyers</a>
+    <a href="undeployed-pages/fha-loan.html">FHA Financing</a>
+    <a href="undeployed-pages/va-loan.html">VA Financing</a>
+    <a href="undeployed-pages/jumbo-loan.html">Jumbo Loan</a>
+    <a href="undeployed-pages/primary-rehab-loan.html">Primary Rehab</a>
+    <a href="undeployed-pages/vacation-investment-home-funding.html">Vacation, Air BNB, Real Estate Invest</a>
+    <a href="undeployed-pages/fixed-rate-mortgages.html">Fixed Rate Mortgages</a>
+    <a href="business-opportunities.html">Business Opportunities</a>
+    <a href="business-resources.html">Business Resources</a>
+    <a href="refer-a-friend.html">Refer-A-Friend</a>
+    <a href="contact.html">Contact</a>
   </div>
 </nav>
 <script>
@@ -228,19 +271,19 @@
 </script>
 
 <header class="fp-hero">
+  <div class="glow-l" aria-hidden="true"></div>
+  <div class="glow-r" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="fp-hero-grid">
-      <div>
-        <h1>Real Estate Investment Funding</h1>
-        <div class="fp-video">
-          <img src="../ChatGPT Image Jul 19, 2026, 05_38_10 PM.png" alt="Real Estate Investment Funding" />
-          <div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="fp-video-label">
-            <div class="t">Funding for Fix and Flips, Rental Property, New Construction, Bridge Loans, Multi-Family and Apartments</div>
-          </div>
-        </div>
+    <div class="fp-hero-inner">
+      <div class="eyebrow no-dot">Funding Program</div>
+      <h1>Business Funding</h1>
+      <p class="fp-hero-sub">No Credit Score Requirement. That's right! Your personal credit score can be a 450.</p>
+      <div class="fp-video">
+        <img src="ChatGPT Image Jul 19, 2026, 05_15_32 PM.png" alt="Business Funding" />
+        <div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
-      <div class="fp-seal">
+      <div class="fp-trust-bar">
+        <div class="n">$1+ BILLION</div>
         <div class="stars">
           <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.6h7.6z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.6h7.6z"/></svg>
@@ -248,62 +291,55 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.6h7.6z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.6h7.6z"/></svg>
         </div>
-        <div class="n">$1+ BILLION</div>
         <div class="l">In Funding Secured From Our Global Marketplace</div>
       </div>
+      <div class="fp-headline">
+        <h2>Asset, Cash Flow, Collateral Based<br>Qualify to get <span class="amt">$10,000 - $1,000,000+</span></h2>
+      </div>
+      <div class="fp-stat-row">
+        <div class="fp-stat-cell"><div class="t">Funds Usually Arrive</div><div class="s">1-3 Business Days</div></div>
+        <div class="fp-stat-cell"><div class="t">Personal Score</div><div class="s">Tri Merge 580+</div></div>
+      </div>
+      <a class="btn btn-primary" href="https://form.jotform.com/dominatetoday/businessfundingapplication" target="_blank" rel="noopener">Apply Now!</a>
     </div>
   </div>
 </header>
 
-<section class="fp-cta-band">
-  <div class="wrap">
-    <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/PkXXQ5sL68EsneWBUybg" target="_blank" rel="noopener">Apply Now!</a>
-    <div class="fp-headline">
-      <h2>Purchase | Rate and Term | Cashout Refinance</h2>
-    </div>
-    <div class="fp-note">
-      <div class="t">Pre-Qualification Guidelines &mdash; Funding Requirements</div>
-      <div class="s">Minimum Loan Amount $75,000 &nbsp;&middot;&nbsp; Maximum Loan Amount: NO CAP</div>
-    </div>
-  </div>
-</section>
-
-<section class="fp-req-section dark" style="padding-top:80px;">
+<section class="fp-req-section dark">
   <div class="wrap">
     <div class="fp-req-grid">
       <div>
+        <div class="fp-step-tag on-dark"><div class="num">01</div><div class="lbl">Requirements</div></div>
         <h2>Funding Requirements</h2>
-        <ul class="fp-req-list" style="margin-top:28px;">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>680+ Middle Credit Score</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Usually 20-30% Down Payment + Closing Cost Seasoned for 60 days</li>
-        </ul>
+        <div class="fp-req-cards">
+          <div class="fp-req-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>Monthly Bank Deposits $10,000+ for last 3 months, OR</p></div>
+          <div class="fp-req-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>Monthly Merchant Processing $5,000+ for last 6 months</p></div>
+          <div class="fp-req-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>Currently Own Real Estate Investment Property? Not a requirement, however, will help increase funding amount.</p></div>
+          <div class="fp-req-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>Currently, Own Commercial Property? Not a requirement, however, will help increase funding amount.</p></div>
+        </div>
       </div>
       <div class="fp-req-photo">
-        <img src="../ChatGPT Image Jul 19, 2026, 05_45_22 PM.png" alt="Real estate investment funding" />
+        <img src="ChatGPT Image Jul 19, 2026, 05_25_08 PM.png" alt="Empire Funding advisor reviewing business funding paperwork" />
       </div>
     </div>
   </div>
 </section>
 
 <section class="fp-split">
-  <div class="wrap fp-split-copy" style="max-width:720px;margin:70px auto 0;text-align:center;">
-    <h2>Specializing in:</h2>
-    <ul style="text-align:left;max-width:460px;margin:24px auto 0;">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Fix and Flips</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Rental Property</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>New Construction</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Bridge Loans</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Multi-Family</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Apartments</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Anything Real Estate Investment We Can Help</li>
-    </ul>
-    <p style="margin-top:26px;font-weight:700;color:var(--gold-700);">Usually, Funds in 5-7 Days After Appraisal</p>
+  <div class="wrap">
+    <div class="fp-split-grid">
+      <div class="fp-split-photo">
+        <img src="advisor-consultation.png" alt="Business team discussing funding options" />
+      </div>
+      <div>
+        <div class="fp-step-tag on-light"><div class="num">02</div><div class="lbl">Eligibility</div></div>
+        <h2>Who benefits?</h2>
+        <p style="margin-top:18px;">Any business type that generates revenue that's deposited into your bank account daily or quite frequently — for example, retail, health providers, bars, clubs, spas, fitness, auto sales, car rentals, consultants, contractors, hotels, grocery stores, gas stations and so many more.</p>
+        <a class="btn btn-primary" href="https://form.jotform.com/dominatetoday/businessfundingapplication" target="_blank" rel="noopener">Apply Now!</a>
+      </div>
+    </div>
   </div>
 </section>
-
-<div class="fp-final-cta">
-  <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/PkXXQ5sL68EsneWBUybg" target="_blank" rel="noopener">Apply Now!</a>
-</div>
 
 <section class="legal">
   <div class="wrap legal-grid">
@@ -326,18 +362,18 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="logo-img footer" src="../logo-wordmark-cropped.png" alt="Empire Funding &amp; Capital Solutions" />
+        <img class="logo-img footer" src="logo-wordmark-cropped.png" alt="Empire Funding &amp; Capital Solutions" />
         <p>Business funding and mortgage financing solutions for entrepreneurs building generational wealth.</p>
-        <img class="footer-ghost" src="../icon-mark-cropped.png" alt="" aria-hidden="true" />
+        <img class="footer-ghost" src="icon-mark-cropped.png" alt="" aria-hidden="true" />
       </div>
       <div class="fdiv"></div>
       <div>
         <h4>Company</h4>
         <ul>
-          <li><a href="../our-company.html">Our Company</a></li>
-          <li><a href="../meet-our-ceo.html">Meet the CEO</a></li>
-          <li><a href="../refer-a-friend.html">Refer-A-Friend</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="our-company.html">Our Company</a></li>
+          <li><a href="meet-our-ceo.html">Meet the CEO</a></li>
+          <li><a href="refer-a-friend.html">Refer-A-Friend</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="fdiv"></div>
@@ -345,12 +381,12 @@
         <h4>Funding Programs</h4>
         <ul>
           <li><a href="business-funding.html">Business Funding</a></li>
-          <li><a href="real-estate-investment-funding.html">Real Estate Investment</a></li>
-          <li><a href="commercial-funding.html">Commercial Funding</a></li>
+          <li><a href="undeployed-pages/real-estate-investment-funding.html">Real Estate Investment</a></li>
+          <li><a href="undeployed-pages/commercial-funding.html">Commercial Funding</a></li>
           <li><a href="business-credit-builder.html">Business Credit Builder</a></li>
-          <li><a href="coaching-funding.html">Coaching Funding</a></li>
-          <li><a href="quick-funding.html">Quick Funding</a></li>
-          <li><a href="faith-based-funding.html">Faith-Based Funding</a></li>
+          <li><a href="undeployed-pages/coaching-funding.html">Coaching Funding</a></li>
+          <li><a href="undeployed-pages/quick-funding.html">Quick Funding</a></li>
+          <li><a href="undeployed-pages/faith-based-funding.html">Faith-Based Funding</a></li>
         </ul>
       </div>
       <div class="fdiv"></div>
