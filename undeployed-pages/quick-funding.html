@@ -112,19 +112,31 @@
   .fp-hero-inner .btn{margin-top:32px;}
 
   .fp-req-section{padding:110px 0;}
-  .fp-req-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
+  .fp-req-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:stretch;}
   @media (max-width:900px){.fp-req-grid{grid-template-columns:1fr;gap:40px;}}
   .fp-req-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;column-count:2;column-gap:28px;}
   @media (max-width:640px){.fp-req-list{column-count:1;}}
   .fp-req-list li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;break-inside:avoid;}
   .fp-req-list svg{width:15px;height:15px;flex-shrink:0;margin-top:4px;stroke:var(--gold-700);}
-  .fp-req-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);}
+  .fp-req-photo{border-radius:20px;overflow:hidden;min-height:100%;box-shadow:var(--shadow);}
   .fp-req-photo img{width:100%;height:100%;object-fit:cover;}
+
+  .fp-req-panel{background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:32px;box-shadow:var(--shadow);margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:0 32px;}
+  @media (max-width:640px){.fp-req-panel{grid-template-columns:1fr;}}
+  .fp-req-col{display:flex;flex-direction:column;}
+  .fp-req-col + .fp-req-col{border-left:1px solid var(--slate-200);padding-left:32px;}
+  @media (max-width:640px){.fp-req-col + .fp-req-col{border-left:none;padding-left:0;}}
+  .fp-req-row{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--slate-200);transition:background .15s var(--ease-out);}
+  .fp-req-col > .fp-req-row:last-child{border-bottom:none;}
+  .fp-req-row:hover{background:var(--slate-100);margin:0 -14px;padding-left:14px;padding-right:14px;border-radius:10px;}
+  .fp-req-row .ic{width:28px;height:28px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fp-req-row .ic svg{width:13px;height:13px;stroke:var(--ink);}
+  .fp-req-row p{font-size:14.5px;color:var(--slate-600);margin:0;line-height:1.4;}
 
   .fp-split{padding:110px 0;}
   .fp-split-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
   @media (max-width:900px){.fp-split-grid{grid-template-columns:1fr;gap:40px;}}
-  .fp-split-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);}
+  .fp-split-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3.6;box-shadow:var(--shadow);}
   .fp-split-photo img{width:100%;height:100%;object-fit:cover;}
   .fp-split.dark{background:var(--ink);color:#fff;position:relative;overflow:hidden;}
   .fp-split.dark::after{content:"";position:absolute;inset:0;background-image:url('../6225087.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.03;pointer-events:none;}
@@ -136,8 +148,13 @@
   .fp-split .sub-block{margin-top:36px;}
   .fp-split .sub-block h3{margin-bottom:14px;}
   .fp-req-list.simple{column-count:1;}
+  .fp-benefit-panel{background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:8px 26px;box-shadow:var(--shadow);margin-top:26px;}
+  .fp-benefit-row{display:flex;align-items:center;gap:14px;padding:17px 0;border-bottom:1px solid var(--slate-200);}
+  .fp-benefit-row:last-child{border-bottom:none;}
+  .fp-benefit-row .ic{width:28px;height:28px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fp-benefit-row .ic svg{width:13px;height:13px;stroke:var(--ink);}
+  .fp-benefit-row span{font-size:15px;font-weight:600;color:var(--ink);}
 
-  .fp-final-cta{padding:60px 0 110px;text-align:center;}
 
   /* ---------- LEGAL ---------- */
   .legal{background:var(--slate-100);padding:90px 0;border-top:1px solid var(--slate-200);}
@@ -311,21 +328,25 @@
       <div>
         <div class="fp-step-tag on-light"><div class="num">01</div><div class="lbl">Pre-Qualification Guidelines</div></div>
         <h2>Funding Requirements</h2>
-        <ul class="fp-req-list" style="margin-top:28px;">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>700+ Tri Merge Credit Score</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No Proof of Income</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No Proof of Employment</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No Collateral</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No Lates or Collections in the last 12 months</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No Foreclosure in the last 3 years</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No Bankruptcies in the last 5 years</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No CPNs</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>2 Primary Tradelines at least 24 months</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>2 Primary Tradelines at least 12 months</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>4 to 1 AU Ratio, if applicable</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No More Than 4 Inquiries, Not a Deal Breaker</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Utilization Under 50%, Not a Deal Breaker</li>
-        </ul>
+        <div class="fp-req-panel">
+          <div class="fp-req-col">
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>700+ Tri Merge Credit Score</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No Proof of Income</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No Proof of Employment</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No Collateral</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No Lates or Collections in the last 12 months</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No Foreclosure in the last 3 years</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No Bankruptcies in the last 5 years</p></div>
+          </div>
+          <div class="fp-req-col">
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No CPNs</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>2 Primary Tradelines at least 24 months</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>2 Primary Tradelines at least 12 months</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>4 to 1 AU Ratio, if applicable</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>No More Than 4 Inquiries, Not a Deal Breaker</p></div>
+            <div class="fp-req-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><p>Utilization Under 50%, Not a Deal Breaker</p></div>
+          </div>
+        </div>
       </div>
       <div class="fp-req-photo">
         <img src="../ChatGPT Image Jul 19, 2026, 04_54_50 PM.png" alt="Quick funding requirements consultation" />
@@ -362,14 +383,15 @@
       <div>
         <div class="fp-step-tag on-light"><div class="num">03</div><div class="lbl">Who Benefits</div></div>
         <h2>Who Benefits?</h2>
-        <ul class="fp-req-list simple" style="margin-top:22px;">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" style="stroke:var(--gold-700);"><path d="M20 6L9 17l-5-5"/></svg>Startups</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" style="stroke:var(--gold-700);"><path d="M20 6L9 17l-5-5"/></svg>Entrepreneurs</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" style="stroke:var(--gold-700);"><path d="M20 6L9 17l-5-5"/></svg>Small Business Owners</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" style="stroke:var(--gold-700);"><path d="M20 6L9 17l-5-5"/></svg>Fortune 500 companies</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" style="stroke:var(--gold-700);"><path d="M20 6L9 17l-5-5"/></svg>Movers and Shakers</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" style="stroke:var(--gold-700);"><path d="M20 6L9 17l-5-5"/></svg>Anyone that has projects that need working capital</li>
-        </ul>
+        <div class="fp-benefit-panel">
+          <div class="fp-benefit-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Startups</span></div>
+          <div class="fp-benefit-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Entrepreneurs</span></div>
+          <div class="fp-benefit-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Small Business Owners</span></div>
+          <div class="fp-benefit-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Fortune 500 Companies</span></div>
+          <div class="fp-benefit-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Movers and Shakers</span></div>
+          <div class="fp-benefit-row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div><span>Anyone that has projects that need working capital</span></div>
+        </div>
+        <a class="btn btn-primary" style="margin-top:28px;" href="https://api.leadconnectorhq.com/widget/form/mi4LNHh0Dv3so8SsWwn2" target="_blank" rel="noopener">Apply Now!</a>
       </div>
       <div class="fp-split-photo">
         <img src="../ChatGPT Image Jul 19, 2026, 05_25_08 PM.png" alt="Empire Funding client meeting" />
@@ -378,9 +400,6 @@
   </div>
 </section>
 
-<div class="fp-final-cta">
-  <a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/form/mi4LNHh0Dv3so8SsWwn2" target="_blank" rel="noopener">Apply Now!</a>
-</div>
 
 <section class="legal">
   <div class="wrap legal-grid">
