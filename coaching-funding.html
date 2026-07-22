@@ -110,6 +110,14 @@
   @media (max-width:760px){.fp-headline h2{white-space:normal;}}
   .fp-headline .amt{color:var(--gold-300);}
   .fp-hero-inner .btn{margin-top:28px;}
+
+  .marquee{position:relative;border-top:1px solid rgba(255,255,255,.08);padding:22px 0;overflow:hidden;background:var(--ink);}
+  .marquee::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold-grad);}
+  .marquee-track{display:flex;gap:14px;white-space:nowrap;animation:mv 26s linear infinite;font-size:12.5px;font-weight:700;color:#c9c7bd;text-transform:uppercase;letter-spacing:.1em;}
+  .marquee-track span.dot{color:var(--gold-500);font-size:8px;}
+  .marquee-track span.item{padding:0 6px;}
+  @keyframes mv{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
   .fp-stat-row{display:flex;width:fit-content;justify-content:flex-start;gap:0;margin-top:24px;margin-left:auto;margin-right:auto;background:#fff;border:1px solid var(--slate-200);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;}
   @media (max-width:760px){.fp-stat-row{margin-left:auto;margin-right:auto;}}
   @media (max-width:640px){.fp-stat-row{flex-direction:column;}}
@@ -330,6 +338,15 @@
     </div>
   </div>
 </header>
+
+<div class="marquee">
+  <div class="wrap">
+    <div class="marquee-track">
+      <span class="item">Business Funding</span><span class="dot">●</span><span class="item">Real Estate Investment</span><span class="dot">●</span><span class="item">Commercial Funding</span><span class="dot">●</span><span class="item">FHA Financing</span><span class="dot">●</span><span class="item">VA Financing</span><span class="dot">●</span><span class="item">Jumbo Loans</span><span class="dot">●</span>
+      <span class="item">Business Funding</span><span class="dot">●</span><span class="item">Real Estate Investment</span><span class="dot">●</span><span class="item">Commercial Funding</span><span class="dot">●</span><span class="item">FHA Financing</span><span class="dot">●</span><span class="item">VA Financing</span><span class="dot">●</span><span class="item">Jumbo Loans</span><span class="dot">●</span>
+    </div>
+  </div>
+</div>
 
 <section class="fp-req-section dark">
   <div class="wrap">
