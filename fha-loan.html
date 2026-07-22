@@ -119,7 +119,11 @@
   .mp-badge-pill{display:inline-block;background:var(--slate-100);border:1px solid var(--slate-200);color:var(--gold-700);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:7px 16px;border-radius:99px;margin-bottom:16px;}
 
   .mp-final{position:relative;background:var(--ink);padding:90px 0;text-align:center;overflow:hidden;}
-  .mp-final::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:2px;background:var(--gold-grad);}
+  .mp-final::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:2px;background:var(--gold-grad);z-index:2;}
+  .mp-final .pattern{position:absolute;inset:0;background:url('6225087.jpg') center/cover;opacity:.015;z-index:0;}
+  .mp-final .glow-l{position:absolute;top:-30%;left:-12%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.24) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-final .glow-r{position:absolute;bottom:-30%;right:-12%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(221,183,78,.24) 0%, rgba(221,183,78,0) 70%);pointer-events:none;z-index:0;}
+  .mp-final .wrap{position:relative;z-index:1;}
   .mp-final h2{color:#fff;max-width:22ch;margin:0 auto;}
   .mp-final .mp-cta-row{justify-content:center;margin-top:30px;}
   .mp-final p{color:#c4c2ba;max-width:52ch;margin:14px auto 0;}
@@ -375,6 +379,9 @@
 </section>
 
 <section class="mp-final">
+  <div class="pattern"></div>
+  <div class="glow-l"></div>
+  <div class="glow-r"></div>
   <div class="wrap">
     <h2>Have Questions About FHA Loans?</h2>
     <p>One of our mortgage specialists would be happy to answer all of your questions. **Empire Funding &amp; Capital Solutions is not affiliated with or acting on behalf of or at the direction of FHA, VA, USDA or the Federal Government.</p>
