@@ -1,5 +1,8 @@
 <meta charset="UTF-8">
 <title>Self-Employed Primary Residence Funding — Empire Funding &amp; Capital Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#17181C; --charcoal:#1E2027; --paper:#FFFFFF;
@@ -9,13 +12,15 @@
     --shadow: 0 20px 50px -20px rgba(20,20,15,.15);
     --font-display: 'Space Grotesk', 'Inter', sans-serif;
     --font-body: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    --font-accent: 'Instrument Serif', Georgia, serif;
     --ease-out: cubic-bezier(.16,1,.3,1);
     --focus-ring: 0 0 0 3px rgba(221,183,78,.55);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);overflow-x:hidden;}
-  h1,h2,h3{font-family:var(--font-display);font-weight:800;text-wrap:balance;margin:0;line-height:1.12;letter-spacing:-.01em;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);overflow-x:hidden;position:relative;}
+  body::after{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;mix-blend-mode:overlay;pointer-events:none;z-index:999;}
+  h1,h2,h3{font-family:var(--font-display);font-weight:700;text-wrap:balance;margin:0;line-height:1.12;letter-spacing:-.02em;-webkit-text-stroke:0.6px currentColor;}
   h1{font-size:clamp(30px,3.6vw,46px);}
   h2{font-size:clamp(26px,3vw,38px);}
   h3{font-size:20px;}
@@ -23,6 +28,7 @@
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
   .wrap{max-width:1400px;margin:0 auto;padding:0 32px;}
+  .accent-italic{font-family:var(--font-accent);font-style:italic;font-weight:400;color:var(--gold-300);-webkit-text-stroke:0;display:inline-block;}
   a:focus-visible, button:focus-visible{outline:none;box-shadow:var(--focus-ring);border-radius:6px;}
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;padding:16px 28px;border-radius:99px;border:none;cursor:pointer;font-family:var(--font-body);transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out);white-space:nowrap;}
   .btn:hover{transform:translateY(-2px);}
@@ -31,37 +37,37 @@
   .btn-dark{background:var(--ink);color:#fff;}
   .btn-sm{padding:11px 20px;font-size:13px;}
 
-  /* NAV (site-standard, unchanged) */
-  nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--slate-200);}
+  /* NAV */
+  nav{position:sticky;top:0;z-index:60;background:rgba(23,24,28,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1);}
   nav .row{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;gap:28px;}
   .logo-img{height:38px;width:auto;}
   .logo-img.footer{height:36px;margin-bottom:20px;}
-  .navlinks{display:flex;flex-direction:column;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--ink);}
+  .navlinks{display:flex;flex-direction:column;align-items:center;gap:9px;font-size:13px;font-weight:600;color:#fff;}
   .nav-row{display:flex;justify-content:center;gap:22px;white-space:nowrap;}
   .navlinks a{position:relative;padding-bottom:4px;}
   .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold-grad);transition:width .22s var(--ease-out);}
-  .navlinks a:hover, .navlinks a.active{color:var(--gold-700);}
+  .navlinks a:hover, .navlinks a.active{color:var(--gold-300);}
   .navlinks a:hover::after, .navlinks a.active::after{width:100%;}
   @media (max-width:1180px){.navlinks{display:none;}}
 
   .nav-drop{position:relative;z-index:10;}
   .nav-drop>.drop-label{display:flex;align-items:center;gap:5px;cursor:pointer;padding-bottom:5px;}
   .nav-drop>.drop-label svg{width:11px;height:11px;stroke:currentColor;transition:transform .18s var(--ease-out);}
-  .nav-drop:hover>.drop-label{color:var(--gold-700);}
+  .nav-drop:hover>.drop-label{color:var(--gold-300);}
   .nav-drop:hover>.drop-label svg{transform:rotate(180deg);}
-  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:0;background:#fff;border:1px solid var(--slate-200);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
+  .drop-menu{position:absolute;top:100%;left:-16px;margin-top:0;background:var(--charcoal);border:1px solid rgba(255,255,255,.1);border-radius:12px;box-shadow:var(--shadow);padding:10px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility .18s;}
   .nav-drop:hover .drop-menu{opacity:1;visibility:visible;transform:translateY(0);}
-  .drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;}
-  .drop-menu a:hover{background:var(--slate-100);color:var(--gold-700);}
+  .drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:#fff;white-space:nowrap;}
+  .drop-menu a:hover{background:rgba(255,255,255,.06);color:var(--gold-300);}
   .nav-actions{display:flex;align-items:center;gap:14px;}
   .nav-burger{display:none;flex-direction:column;gap:5px;width:26px;cursor:pointer;background:none;border:none;padding:6px;}
-  .nav-burger span{display:block;height:2px;background:var(--ink);border-radius:2px;}
+  .nav-burger span{display:block;height:2px;background:#fff;border-radius:2px;}
   @media (max-width:1180px){.nav-burger{display:flex;}}
-  .mobile-menu{display:none;flex-direction:column;padding:10px 32px 26px;border-top:1px solid var(--slate-200);}
+  .mobile-menu{display:none;flex-direction:column;padding:10px 32px 26px;border-top:1px solid rgba(255,255,255,.1);background:rgba(23,24,28,.98);}
   .mobile-menu.open{display:flex;}
-  .mobile-menu a{padding:12px 4px;font-size:14.5px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--slate-200);}
+  .mobile-menu a{padding:12px 4px;font-size:14.5px;font-weight:600;color:#fff;border-bottom:1px solid rgba(255,255,255,.1);}
   .mobile-menu a:last-child{border-bottom:none;}
-  .mobile-menu .m-group-label{padding:14px 4px 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);}
+  .mobile-menu .m-group-label{padding:14px 4px 4px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-300);}
 
   /* ================= MP (mortgage program) SYSTEM — unique to these 8 pages ================= */
   .mp-hero{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;color:#fff;}
@@ -108,16 +114,18 @@
   .mp-req-card h3{margin-bottom:10px;}
   .mp-req-card p{color:#c4c2ba;font-size:14.5px;line-height:1.6;}
 
-  .mp-info{padding:110px 0;}
+  .mp-info{padding:110px 0;background:var(--charcoal);color:#fff;}
   .mp-info-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;}
   @media (max-width:900px){.mp-info-grid{grid-template-columns:1fr;gap:40px;}}
-  .mp-blob{position:relative;aspect-ratio:1/1;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);}
+  .mp-blob{position:relative;aspect-ratio:1/1;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.5);}
   .mp-blob img{width:100%;height:100%;object-fit:cover;}
+  .mp-info h2{color:#fff;}
+  .mp-info p{color:#c4c2ba;}
   .mp-timeline{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:22px;}
   .mp-timeline li{display:flex;gap:16px;}
-  .mp-timeline .num{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--slate-100);border:1.5px solid var(--gold-500);color:var(--ink);font-family:var(--font-display);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;}
-  .mp-timeline .txt{font-size:15px;color:var(--slate-600);padding-top:3px;}
-  .mp-badge-pill{display:inline-block;background:var(--slate-100);border:1px solid var(--slate-200);color:var(--gold-700);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:7px 16px;border-radius:99px;margin-bottom:16px;}
+  .mp-timeline .num{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);border:1.5px solid var(--gold-500);color:var(--gold-300);font-family:var(--font-display);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;}
+  .mp-timeline .txt{font-size:15px;color:#c4c2ba;padding-top:3px;}
+  .mp-badge-pill{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:var(--gold-300);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:7px 16px;border-radius:99px;margin-bottom:16px;}
 
   .mp-final{position:relative;background:var(--ink);padding:90px 0;text-align:center;overflow:hidden;}
   .mp-final::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:2px;background:var(--gold-grad);z-index:2;}
@@ -128,11 +136,15 @@
   .mp-final h2{color:#fff;max-width:22ch;margin:0 auto;}
   .mp-final .mp-cta-row{justify-content:center;margin-top:30px;}
 
-  .legal{background:var(--slate-100);padding:90px 0;border-top:1px solid var(--slate-200);}
-  .legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
+  .legal{background:var(--ink);padding:90px 0;position:relative;}
+  .legal::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:1px;background:var(--gold-grad);opacity:.4;}
+  .legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   @media (max-width:900px){.legal-grid{grid-template-columns:1fr;}}
-  .legal h5{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-700);margin:0 0 10px;}
-  .legal p{font-size:12px;line-height:1.7;color:var(--slate-600);}
+  .legal-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 26px;transition:border-color .2s var(--ease-out), background .2s var(--ease-out);}
+  .legal-card:hover{border-color:rgba(221,183,78,.3);background:rgba(255,255,255,.045);}
+  .legal h5{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-300);margin:0 0 12px;}
+  .legal h5::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-grad);flex-shrink:0;}
+  .legal p{font-size:12.5px;line-height:1.75;color:#a6a49b;}
   footer{background:var(--ink);color:#fff;padding:130px 0 0;position:relative;overflow:hidden;}
   .footer-grid{display:grid;grid-template-columns:1.3fr 1px 1fr 1px 1fr 1px 1fr;gap:44px;padding-bottom:56px;position:relative;}
   @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}.footer-grid .fdiv{display:none;}}
@@ -159,7 +171,7 @@
 
 <nav>
   <div class="row wrap">
-    <a href="homepage.html"><img class="logo-img" src="logo-black-gold.png" alt="Empire Funding &amp; Capital Solutions" /></a>
+    <a href="homepage.html"><img class="logo-img" src="logo-wordmark-cropped.png" alt="Empire Funding &amp; Capital Solutions" /></a>
     <div class="navlinks">
       <div class="nav-row">
         <a href="homepage.html">Home</a>
@@ -348,7 +360,7 @@
       </ul>
       <div class="mp-cta-row" style="margin-top:32px;">
         <a class="btn btn-dark" href="https://api.leadconnectorhq.com/widget/form/PkXXQ5sL68EsneWBUybg" target="_blank" rel="noopener">Apply Now!</a>
-        <a class="btn" style="border:1.5px solid var(--ink);" href="https://calendly.com/getyourappointmentnow/selfemployedprimary" target="_blank" rel="noopener">Schedule Paid Consultation</a>
+        <a class="btn btn-ghost" href="https://calendly.com/getyourappointmentnow/selfemployedprimary" target="_blank" rel="noopener">Schedule Paid Consultation</a>
       </div>
     </div>
   </div>
@@ -369,15 +381,15 @@
 
 <section class="legal">
   <div class="wrap legal-grid">
-    <div>
+    <div class="legal-card">
       <h5>Income and Earning Disclaimer</h5>
       <p>Any profit, income statements or examples through our website are only estimates and gauges of what may be possible or conceivable now or in the future. There can be no assurance as to any particular financial outcome based on the use of our website. YOU concur that I am not liable or responsible for your earnings, the achievement or disappointment of your business choices, the expansion, increase or decrease of your finances or income level. You are solely responsible for your results and outcome.</p>
     </div>
-    <div>
+    <div class="legal-card">
       <h5>Testimonial Disclaimer</h5>
       <p>All testimonials and photos are real clients and are shared for illustration only. The intention is to not ensure that our existing or future clients will achieve the same or similar results although present what is possible for anyone willing to put in the work and never give up on your goals.</p>
     </div>
-    <div>
+    <div class="legal-card">
       <h5>Disclaimer</h5>
       <p>We are not Certified Financial Advisers, U. S. Securities Dealers, Stock Brokers, or Investment Advisers. We are not business consultants and acting in the capacity of a financial intermediary who provides advice to private individuals on or about business matters. Please understand that the contemplated transaction(s) is strictly private and in no way relates to the United States Securities Act of 1933 (THE ACT) and does not involve the sale of registered securities. This transaction(s) are private and exempt from the act.</p>
     </div>
